@@ -1,4 +1,4 @@
-{% macro list(name, descr, modifications, list, isInline, attributes) %}
+{% macro list(name, descr, modifications, list, isInline, attributes, label) %}
 {% if descr %}
   <!-- begin {{ name }} -->
   {% if isInline %}
@@ -54,6 +54,9 @@
      {% for attr, attrValue in attributes %} {{ attr }}="{{ attrValue }}" {% endfor %}
   >
   {% endif %}
+    {% if label.first %}
+      {{ label.first | safe }}
+    {% endif %}
     <ul {% if modifications.list %}class="{{ modifications.list }}"{% endif %}>
       {% for i in list %}
       <li
@@ -66,6 +69,9 @@
          >{{ i.link | safe }}</a>{% endif %}{% if i.item %}{{ i.item | safe }}{% endif %}</li>
       {% endfor %}
     </ul>
+    {% if label.last %}
+      {{ label.last | safe }}
+    {% endif %}
   {% if name === 'nav' %}
   </nav>  
   {% elseif isInline %}

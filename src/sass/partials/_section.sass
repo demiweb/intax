@@ -1,0 +1,65 @@
+.section
+  position: relative
+  padding-top: 100px
+  padding-bottom: 100px
+  +xl
+    padding-top: 80px
+    padding-bottom: 80px
+  +lg
+    padding-top: 60px
+    padding-bottom: 60px
+  +md
+    padding-top: 40px
+    padding-bottom: 40px
+  +sm
+    padding-top: 30px
+    padding-bottom: 30px
+  &__title
+    margin-bottom: 40px
+    +lg
+      margin-bottom: 30px
+    +md
+      margin-bottom: 15px
+  &__side-title
+    background-color: $gray-lightest
+    padding-bottom: 20px
+  &__img
+    +cover
+    height: 100%
+  &__img-wrap
+    font-size: 0
+    margin-bottom: 30px
+    +md
+      margin-bottom: 15px
+
+  &__side-content, &__side-title
+    padding-left: percentage(2/12)
+  &__side
+    position: relative
+    
+    +before
+      position: absolute
+      background-color: $gray-lightest
+      top: 0
+      right: 0
+      left: 0
+      z-index: 0
+      top: -100px
+      bottom: 100%
+      +xl
+        top: -80px
+      +lg
+        top: -60px
+      +md
+        top: -40px
+      +sm
+        top: -30px
+
+  &--color
+    background-color: $accent
+    +image('bg-color.jpg')
+    +cover
+    color: $white
+  &--border
+    border-top: 1px solid $gray-lightest
+    border-bottom: 1px solid $gray-lightest

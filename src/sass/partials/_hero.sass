@@ -1,0 +1,49 @@
+.hero
+  position: relative
+  color: $white
+  text-align: center
+  &__bg
+    +coverdiv
+    z-index: 0
+    background-color: $gray-light
+    +before
+      +coverdiv
+      z-index: 1
+      background-color: rgba($black, .7)
+    video
+      width: 100%
+      height: 100%
+      position: relative
+      z-index: 0
+      object-fit: cover
+  &__inner
+    position: relative
+    z-index: 1
+    +windowHeight($header-height)
+    +flex(center, normal, column)
+  &__content
+    max-width: 750px
+    margin-left: auto
+    margin-right: auto
+  &__upttl
+    margin-bottom: 25px
+    +md
+      margin-bottom: 15px
+  &__title
+    margin-bottom: 25px
+    +md
+      margin-bottom: 15px
+  &__subttl
+    margin-bottom: 40px
+    +lg
+      margin-bottom: 30px
+    +md
+      margin-bottom: 15px
+  &__btns
+    +flex
+    margin-left: -6px
+    margin-right: -6px
+  &__btn
+    margin-right: 6px
+    margin-left: 6px
+    width: 50%

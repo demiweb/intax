@@ -1,0 +1,36 @@
+<!-- begin section -->
+<section class="section">
+  <div class="container">
+    <div class="grid">
+      <div class="_col-5">
+        <div class="section__title">
+          <h2 class="title title--h2">АУДИТОРИЯ</h2>
+        </div>
+
+        <div class="text">
+         <p>Эффективность Вашего участия в конференции будет обеспечена нашими безупречными организационными стандартами, роскошным местом проведения мероприятия и самым высоким профессиональным уровнем делегатов, докладчиков и экспонентов, которые осуществляют деятельность в сферах:</p>
+        
+
+          {{ mixins.list(
+            name = 'list',
+            modifications = { wrap: '', item: '', link: '' },
+            list = [
+              { item: 'Банковских услуг' },
+              { item: 'Финансовых услуг' },
+              { item: 'Инвестиционного консалтинга' },
+              { item: 'Юридических услуг' },
+              { item: 'Налогового консалтинга' },
+              { item: 'Инвестиционной миграции' },
+              { item: 'Фидуциарных услуг' }
+            ]
+          ) }}
+        </div>
+      </div>
+
+      <div class="_col-7">
+        <div class="section__img js-lazy" data-background-image="./img/647.jpg"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end section -->

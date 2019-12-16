@@ -1,0 +1,50 @@
+.btn
+  $this: &
+  display: inline-block
+  text-align: center
+  +font-title
+  
+  font-weight: 700
+  color: $white
+  padding: .75em 1em
+  position: relative
+  +tr(color .3s, border-color .3s)
+  +before
+    position: absolute
+    z-index: -1
+    background-color: $accent
+    border: 1px solid $accent
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    transform: skew(-15deg)
+    +tr(transform .3s, background-color .3s, border-color .3s)
+  +hover
+    &:not(#{$this}--no-hover)
+      color: $accent
+      +before
+        background-color: transparent
+    // +before
+    //   transform: skew(15deg)
+  span
+    position: relative
+    z-index: 1
+  +xs
+    min-width: 0
+    width: 100%
+
+  &--lg
+    font-size: em(21)
+  &--full
+    min-width: 0
+    width: 100%
+  &--transp
+    color: $accent
+    +before
+      background-color: transparent
+    +hover
+      &:not(#{$this}--no-hover)
+        color: $white
+        +before
+          background-color: $accent

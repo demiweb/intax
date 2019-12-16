@@ -1,0 +1,19 @@
+.descr-item
+  position: relative
+  +notlast
+    margin-bottom: 50px
+    +lg
+      margin-bottom: 30px
+    +md
+      margin-bottom: 15px
+  &__title,
+  &__icon
+    color: $accent
+  &__icon
+    position: absolute
+    top: 0
+    right: calc(100% + 30px)
+    .icon
+      font-size: em(45)
+  &__title
+    font-weight: 700

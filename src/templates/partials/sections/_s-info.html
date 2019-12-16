@@ -1,0 +1,79 @@
+{%set
+descr = [
+  {
+    icon: 'lecture',
+    title: 'КОНФЕРЕНЦИЯ',
+    text: '40+ ведущих иностранных и российских экспертов в сферах инвестирования, структурирования и управления частным капиталом'
+  },
+  {
+    icon: 'people',
+    title: 'ВЫСТАВКА',
+    text: '20+ международных компаний, которые предоставляют услуги по структурированию, управлению и защите частного капитала в России и за рубежом.'
+  },
+  {
+    icon: 'connection',
+    title: 'НЕТВОРКИНГ',
+    text: '300+ делегатов из России и еще 20 стран мира станут участниками различных формальных и неформальных мероприятий, на которых можно наладить полезные деловые контакты с партнерами из РФ и из-за рубежа.'
+  }
+]
+%}
+
+<!-- begin section -->
+<section class="section">
+  <div class="container">
+    <div class="grid">
+      <div class="_col-7">
+        <div class="section__img-wrap">
+          <img class="js-lazy" alt="" src="" data-src="./img/646.jpg"/>
+        </div>
+
+        <div class="section__title">
+          <h2 class="title title--h2">НАЙДИТЕ НОВЫЕ <br>
+            РЕШЕНИЯ ДЛЯ ВАШЕГО БИЗНЕСА <br>
+          И ЗАВОДИТЕ НОВЫЕ ЗНАКОМСТВА</h2>
+        </div>
+
+        <!-- begin text -->
+        <div class="text">
+          <p>В основе нашего подхода к организации мероприятия лежит понимание, что бизнес — это, прежде всего, отношения между людьми, где доверие, репутация и личное знакомство зачастую играют решающую роль при выборе партнеров.</p>
+
+          <p>Именно поэтому мы создаем платформу для эффективного общения, что позволяет нашим участникам 
+          не только получить знания и профессиональную информацию, а еще и лучше узнать и понять друг друга, а также осмысленно и нестандартно продвигать услуги, идеологии и точки зрения.</p>
+        </div>
+        <!-- end text -->
+      </div>
+
+      <div class="_col-5">
+        <div class="section__side">
+          <div class="section__title section__side-title">
+            <h2 class="title title--h2">INTAX <br>
+              PRIVATE CAPITAL <br>
+              FORUM <br>
+            В 2020 ГОДУ</h2>
+          </div>
+
+          <!-- begin descr -->
+          <div class="descr section__side-content">
+            {% for i in descr %}
+            <!-- begin descr-item -->
+            <div class="descr-item">
+              <div class="descr-item__icon">
+                {{ mixins.icon(i.icon) }}
+              </div>
+
+              <div class="descr-item__content">
+                <div class="descr-item__title">{{ i.title | safe }}</div>
+
+                <div class="descr-item__text">{{ i.text | safe }}</div>
+              </div>
+            </div>
+            <!-- end descr-item -->
+            {% endfor %}
+          </div>
+          <!-- end descr -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end section -->

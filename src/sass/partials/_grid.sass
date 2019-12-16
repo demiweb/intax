@@ -1,0 +1,61 @@
+$grid-gap: 30px
+
+.grid
+  margin-left: -$grid-gap / 2
+  margin-right: -$grid-gap / 2
+  +flex(flex-start, normal, row, wrap)
+
+._col
+  width: 100%
+  padding-left: $grid-gap / 2
+  padding-right: $grid-gap / 2
+  margin-bottom: $grid-gap
+
+@for $i from 1 through 12
+  ._col-#{$i}
+    @extend ._col
+    width: percentage($i/12)
+  ._col-xss-#{$i}
+    @extend ._col
+    +xssmin
+      width: percentage($i/12)
+  ._col-xs-#{$i}
+    @extend ._col
+    +xsmin
+      width: percentage($i/12)
+  ._col-sm-#{$i}
+    @extend ._col
+    +smmin
+      width: percentage($i/12)
+  ._col-md-#{$i}
+    @extend ._col
+    +mdmin
+      width: percentage($i/12)
+  ._col-lg-#{$i}
+    @extend ._col
+    +lgmin
+      width: percentage($i/12)
+  ._col-xl-#{$i}
+    @extend ._col
+    +xlmin
+      width: percentage($i/12)
+  ._offset-#{$i}
+    margin-left: percentage($i/12)
+  ._offset-xss-#{$i}
+    +xssmin
+      margin-left: percentage($i/12)
+  ._offset-xs-#{$i}
+    +xsmin
+      margin-left: percentage($i/12)
+  ._offset-sm-#{$i}
+    +smmin
+      margin-left: percentage($i/12)
+  ._offset-md-#{$i}
+    +mdmin
+      margin-left: percentage($i/12)
+  ._offset-lg-#{$i}
+    +lgmin
+      margin-left: percentage($i/12)
+  ._offset-xl-#{$i}
+    +xlmin
+      margin-left: percentage($i/12)

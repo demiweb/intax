@@ -1,0 +1,63 @@
+.header
+  $this: &
+  position: relative
+  z-index: 10
+  &__inner
+    +flex(flex-start, center)
+  &__top
+    background-color: $white
+    position: relative
+    z-index: 1
+    #{$this}__inner
+      height: $header-top-height
+  &__bottom
+    background-color: $accent
+    background-image: linear-gradient( to top, rgb(48,42,42) 0%, rgb(71,54,41) 100%)
+    box-shadow: 0px 0px 25px 0px rgba(7, 6, 3, 0.5)
+    position: relative
+    color: $white
+    z-index: 0
+    #{$this}__inner
+      padding-top: 5px
+      padding-bottom: 5px
+      height: $header-bottom-height
+
+  &__top-left,
+  &__top-right
+    width: 50%
+    +flex(flex-start, center)
+  &__top-left
+    #{$this}__contact
+      width: 33.33333%
+      padding-right: 10px
+  &__top-right
+    justify-content: flex-end
+    #{$this}__contact
+      margin-right: 75px
+  &__nav
+    flex-grow: 1
+    text-align: right
+  &__logo
+    font-size: 0
+
+.header-contact
+  +flex(flex-start, center)
+  font-size: $fz-sm
+  &__icon
+    margin-right: .2em
+    font-size: 0
+    .icon
+      font-size: 14px
+
+.lang
+  text-transform: uppercase
+  +font-title
+  li
+    display: inline-block
+  a
+    +tr(color .3s)
+    +hover
+      color: $accent
+    &.is-active
+      color: $accent
+

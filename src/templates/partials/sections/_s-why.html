@@ -1,0 +1,72 @@
+{%set
+features = [
+  {
+    img: 'Suit-Man-Transparent-Background.png',
+    text: 'Участники <br>
+и спикеры из 20 стран'
+  },
+  {
+    img: '648.png',
+    text: 'Доклады и дискуссии <br>
+на самые важные темы'
+  },
+  {
+    imgMod: 'feature__img--left',
+    img: '653.png',
+    text: 'Роскошная <br>
+локация конференции <br>
+Безупречная организация <br>
+мероприятия'
+  },
+  {
+    img: '649.png',
+    text: '40 спикеров <br>
+самого высокого уровня'
+  },
+  {
+    imgMod: 'feature__img--left feature__img--top',
+    img: '652.png',
+    text: 'Нетворкинг <br>
+среди лидеров <br>
+индустрии wealth management'
+  },
+  {
+    img: '2019-04-06.png',
+    text: 'Вечерний коктейль <br>
+для закрепления <br>
+новых знакомств'
+  }
+]
+%}
+
+<!-- begin section -->
+<section class="section section--border">
+  <div class="container">
+    <div class="section__title text-center">
+      <h2 class="title title--h2">ПОЧЕМУ СТОИТ ПОСЕТИТЬ <br>
+        INTAX PRIVATE CAPITAL FORUM
+      </h2>
+    </div>
+
+    <!-- begin features -->
+    <div class="features">
+      <div class="grid">
+        {% for i in features %}
+        <div class="_col-4">
+          <!-- begin feature -->
+          <div class="feature feature--img">
+            <div class="feature__img{% if i.imgMod %} {{ i.imgMod }}{% endif %}">
+              <img class="js-lazy" alt="" src="" data-src="./img/features/{{ i.img }}"/>
+            </div>
+
+            <div class="feature__content">{{ i.text | safe }}</div>
+          </div>
+          <!-- end feature -->
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    <!-- end features -->
+  </div>
+</section>
+<!-- end section -->

@@ -3,7 +3,7 @@ body
   line-height: 1.4
   font-size: $fz
   min-width: 320px
-  font-family: 'proximanova', Arial, sans-serif
+  +font-content
   color: $c-text
   +no-scroll
   +sm
@@ -15,6 +15,65 @@ body
   font-size: inherit
 
 .lazy
-  &.is-loaded:not(.no-fade-in)
+  $this: &
+  &--loaded:not(#{$this}--no-fade-in)
     animation: fadeIn 1s
+
+.container
+  max-width: 1440px
+  margin-left: auto
+  margin-right: auto
+  padding-left: 15px
+  padding-right: 15px
+
+.logo
+  display: inline-block
+  font-size: 0
+
+.date-label
+  display: inline-block
+  border-top: 1px solid  $accent
+  border-bottom: 1px solid  $accent
+  text-transform: uppercase
+  +font-title
+  font-size: em(18)
+  padding: .3em .3em .2em
+  position: relative
+  &::before, &::after
+    content: ''
+    position: absolute
+    top: 0
+    height: 10px
+    width: 1px
+    z-index: 1
+    background-color: $accent
+  &::before
+    left: 0
+  &::after
+    right: 0
+  &__title
+    &::before, &::after
+      content: ''
+      position: absolute
+      bottom: 0
+      height: 10px
+      width: 1px
+      z-index: 1
+      background-color: $accent
+    &::before
+      left: 0
+    &::after
+      right: 0
+
+.list
+  text-transform: uppercase
+  color: $c-title
+  +font-title
+  font-size: em(24)
+  li
+    +list-bullet
+    &::before
+      margin-right: 1em
+    +notlast
+      margin-bottom: .5em
     
