@@ -1,0 +1,36 @@
+<!-- begin section -->
+<section id="faq" class="section">
+  <div class="container">
+    <div class="section__title">
+      <h2 class="title title--h2">вопрос/ответ</h2>
+    </div>
+
+    <!-- begin faq -->
+    <div class="faq js-accordion">
+      <div class="grid">
+        {% for i in range(0, 6) %}
+        <div class="_col-6">
+          <!-- begin question -->
+          <div class="question">
+            <div class="question__icon">
+              {{ mixins.icon('question-mark') }}
+            </div>
+            <button
+              class="question__btn js-accordion-btn"
+              data-block="question__btn">МЕСТО ВСТРЕЧИ</button>
+
+            <div
+              class="question__content js-accordion-item"
+              data-block="question__content">Регистрация делегатов будет проходить с 8.00 в день конференции. Пожалуйста, обратите внимание на указатели для регистрации делегатов. 
+              Во время регистрации Вы получите бедж участника конференции взамен Вашей визитной карточки. Ношение беджа является обязательным на протяжении всей конференции.
+            </div>
+          </div>
+          <!-- end question -->
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    <!-- end faq -->
+  </div>
+</section>
+<!-- end section -->

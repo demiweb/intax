@@ -1,0 +1,111 @@
+{%set
+prices = [
+  {
+    text: 'Условия участия для делегатов из Российской Федерации и Республики Беларусь:',
+    price: {
+      old: '20 000 руб.',
+      title: '3 500 руб.',
+      date: '(До 31 января 2020)'
+    }
+  },
+  {
+    text: 'Стоимость участия в конференции для делегатов 
+от иностранных компаний:',
+    price: {
+      old: '500 евро',
+      title: '<strong>100</strong> евро',
+      date: '(До 31 января 2020)'
+    }
+  }
+]
+%}
+
+{%set
+rightBlocks = [
+  {
+    title: 'Стать спикером',
+    text: 'Продвигайте Вашу компанию, лично общайтесь с максимальным количеством участников и донесите информацию об услугах вашей компании при помощи экспозиционного стенда.',
+    btn: { title: 'узнать условия' }
+  },
+  {
+    title: 'стать спонсором',
+    text: 'Подтвердите свои лидирующие позиции на рынке 
+с помощью эксклюзивных маркетинговых инструментов, а также доклада, выставочного стенда и многого другого.',
+    btn: { title: 'Получить предложение' }
+  }
+]
+%}
+
+<!-- begin section -->
+<section id="prices" class="section section--gray">
+  <div class="container">
+    <div class="section__title text-center">
+      <h2 class="title title--h2">как принять участие ?</h2>
+    </div>
+
+    <div class="grid">
+      <div class="_col-8">
+        <!-- begin price-block -->
+        <div class="price-block">
+          <div class="price-block__top">Стать делегатом</div>
+
+          <div class="price-block__content">
+            <div class="price-block__text">Развивайте и поддерживайте отношения с коллегами и партнерами, найдите новые решения для Вашего бизнеса и для потребностей Ваших клиентов, увеличивайте свою профессиональную сеть и заводите новые знакомства!</div>
+
+            <hr class="price-block__hr">
+
+            <div class="price-block__prices">
+              {% for i in prices %}
+              <div class="price-block__price-block">
+                <!-- begin price-block-sm -->
+                <div class="price-block-sm">
+                  <div class="price-block-sm__text">{{ i.text | safe }}</div>
+
+                  <div class="price-block-sm__price price">
+                    <div class="price__old">{{ i.price.old | safe }}</div>
+                    <div class="price__price">
+                      <div class="price__price-title">{{ i.price.title | safe }}</div>
+                    </div>
+                    <div class="price__date">{{ i.price.date | safe }}</div>
+                  </div>
+
+                  <div class="price-block-sm__btn">
+                    {{ mixins.btn(
+                      title = 'узнать условия',
+                      mod = 'btn--wide-md'
+                    ) }}
+                  </div>
+                </div>
+                <!-- end price-block-sm -->
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+        <!-- end price-block -->
+      </div>
+
+      <div class="_col-4">
+        {% for i in rightBlocks %}
+        <!-- begin price-block -->
+        <div class="price-block price-block--sm">
+          <div class="price-block__top">{{ i.title | safe }}</div>
+
+          <div class="price-block__content">
+            <div class="price-block__text">{{ i.text | safe }}</div>
+
+            <div class="price-block__btn">
+              {{ mixins.btn(
+                title = i.btn.title,
+                mod = 'btn--wide-md'
+              ) }}
+            </div>
+          </div>
+        </div>
+        <!-- end price-block -->
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end section -->

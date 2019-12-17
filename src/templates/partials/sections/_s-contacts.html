@@ -1,0 +1,85 @@
+{%set
+contacts = [
+  {
+    title: 'адрес',
+    text: '
+      <p><strong>Украина:</strong>
+      01001 Украина, Киев, <br>
+      ул. Софиевская, 18, офис 9</p>
+      <p>
+        <strong>Кипр:</strong>
+        Dimitraki Christodoulou, 5, 3rd floor, <br>
+        Office 303, 1035, Nicosia, Cyprus
+      </p>
+    ',
+    mod: 'contact--lg'
+  },
+  {
+    title: 'Телефон',
+    text: '
+      <p><a href="tel:+380442792997">+38(044) 279-29-97</a></p>
+      <p><a href="tel:+380984959903">+38(098) 495-99-03</a></p>
+    ',
+    mod: ''
+  },
+  {
+    title: 'e-mail',
+    text: '<a href="mailto:info@intax-group.com">info@intax-group.com</a>',
+    mod: ''
+  }
+]
+%}
+
+<!-- begin section -->
+<section id="contacts" class="section section--gray">
+  <div class="container">
+    <div class="grid">
+      <div class="_col-6">
+        <div class="section__title">
+          <h2 class="title title--h2">остались вопросы?</h2>
+        </div>
+
+        <!-- begin contacts-block -->
+        <div class="contacts-block">
+          <div class="contacts-block__form">
+            {% include "partials/_form.html" %}
+          </div>
+
+          <div class="contacts-block__contacts">
+            <!-- begin contacts -->
+            <div class="contacts">
+              {% for i in contacts %}
+              <!-- begin contact -->
+              <div class="contact{% if i.mod %} {{ i.mod }}{% endif %}">
+                <div class="contact__title">
+                  <h5 class="title title--h5">{{ i.title | safe }}</h5>
+                </div>
+
+                <div class="contact__text">{{ i.text | safe }}</div>
+              </div>
+              <!-- end contact -->
+              {% endfor %}
+            </div>
+            <!-- end contacts -->
+          </div>
+        </div>
+        <!-- end contacts-block -->
+      </div>
+
+      <div class="_col-6">
+        {# <div class="section__img"> #}
+          <div class="map">
+            <iframe
+              class="js-lazy"
+              src=""
+              data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.3843037661554!2d30.515162115896246!3d50.452567995093105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce5af8e38d35%3A0x86d529a32196bad2!2z0LLRg9C70LjRhtGPINCh0L7RhNGW0ZfQstGB0YzQutCwLCAxOCwgOSwg0JrQuNGX0LIsIDAyMDAw!5e0!3m2!1sru!2sua!4v1576590205932!5m2!1sru!2sua"
+              frameborder="0"
+              style="border:0;"
+              allowfullscreen=""></iframe>
+          </div>
+        {# </div> #}
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end section -->

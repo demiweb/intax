@@ -1,0 +1,47 @@
+.prev, .next
+  display: inline-block
+  color: $accent
+  +tr(color .3s, transform .5s $easeSmooth)
+  +hover
+    .icon
+      transform: translate(-10px, 0)
+  .icon
+    font-size: em(21)
+    +tr(transform .5s $easeSmooth)
+  &.swiper-button-disabled
+    opacity: .5
+
+.next
+  transform: scaleX(-1)
+
+.slider
+  &__wrap
+    position: relative
+    padding-top: 45px
+    margin-left: -10px
+    margin-right: -10px
+    *
+      box-sizing: border-box
+    .swiper-container
+      padding: 10px
+  &__controls
+    position: absolute
+    z-index: 1
+    top: 0
+    right: 10px
+    margin-left: -5px
+    margin-right: -5px
+  &__prev, &__next
+    margin-left: 5px
+    margin-right: 5px
+
+  &--gallery
+    &__wrap
+      .slide
+        +cover
+        padding-top: 18%
+        +tr(transform .3s)
+        &.swiper-slide-active
+          +scale(1.2)
+          z-index: 1
+    

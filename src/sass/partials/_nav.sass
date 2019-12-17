@@ -4,7 +4,21 @@
     display: inline-block
     +notfirst
       margin-left: 50px
+      +lg
+        margin-left: 0
+    +lg
+      display: block
+      margin-bottom: 1em
   a
     +tr(color .3s)
     +hover
       color: $accent
+
+  &--footer
+    +font-content
+    li
+      display: block
+      +notfirst
+        margin-left: 0
+      +notlast
+        margin-bottom: em(10)

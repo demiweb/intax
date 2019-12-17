@@ -1,5 +1,5 @@
 <!-- begin header -->
-<header class="header">
+<header class="header js-header">
   <div class="header__top">
     <div class="container">
       <div class="header__inner">
@@ -73,8 +73,70 @@
           </a>
         </div>
 
-        <div class="header__nav">
-          {% include "partials/_nav.html" %}
+        <div class="header__nav js-menu">          
+          <div class="header__nav-in">
+            
+            <div class="header__contacts-mob">
+              <div class="header__contact-mob header-contact">
+                <div class="header-contact__icon">
+                  {{ mixins.icon('placeholder') }}
+                </div>
+                <div class="header-contact__text">Москва, Lotte Hotel</div>
+              </div>
+
+              <div class="header__contact-mob header-contact">
+                <div class="header-contact__icon">
+                  {{ mixins.icon('email') }}
+                </div>
+                <div class="header-contact__text">
+                  <a href="mailto:info@intax-group.com">info@intax-group.com</a>
+                </div>
+              </div>
+
+              <div class="header__contact-mob">
+                {{ mixins.list(
+                  name = 'social',
+                  modifications = { wrap: '', item: '', link: '' },
+                  label = { first: '<div class="social__title">Напишите нам:</div>' },
+                  list = [
+                    { link: mixins.icon('viber-1') },
+                    { link: mixins.icon('whatsapp') },
+                    { link: mixins.icon('telegram') }
+                  ]
+                ) }}
+              </div>
+
+              <div class="header__contact-mob">
+                {{ mixins.list(
+                  name = 'social',
+                  modifications = { wrap: '', item: '', link: '' },
+                  label = { first: '<div class="social__title">Следите за нами в соцсетях:</div>' },
+                  list = [
+                    { link: mixins.icon('facebook-logo') },
+                    { link: mixins.icon('linkedin-letters') },
+                    { link: mixins.icon('youtube-logotype') }
+                  ]
+                ) }}
+              </div>
+            </div>
+            {% include "partials/_nav.html" %}
+          </div>
+        </div>
+
+        <div class="header__lang-mob">
+          {{ mixins.list(
+              name = 'lang',
+              modifications = { wrap: '', item: '', link: '' },
+              list = [
+                { item: '', link: 'ru', modItem: '', modLink: 'is-active' },
+                { item: '/', link: '', modItem: '', modLink: '' },
+                { item: '', link: 'en', modItem: '', modLink: '' }
+              ]
+            ) }}
+        </div>
+
+        <div class="header__burger">
+          <button class="burger js-burger"><span></span></button>
         </div>
       </div>
     </div>

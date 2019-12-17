@@ -1,5 +1,12 @@
+{%set
+tabs = [
+  { isActive: true },
+  {}
+]
+%}
+
 <!-- begin section -->
-<section id="program" class="section">
+<section id="program" class="section pb-0">
   <div class="container">
     <div class="section__title text-center">
       <h2 class="title title--h2">программа</h2>
@@ -8,20 +15,22 @@
     <!-- begin program -->
     <div class="program js-tabs">
       <div class="program__tabs">
-        {% for i in range(0, 2) %}
-        <button
-          class="progrm__tab js-tabs-btn"
-          data-block="program__tab"
-          data-tabs-tab="program-{{ i + 1 }}">Поток {{ i + 1}}</button>
+        {% for i in tabs %}
+        <div class="program__tab-wrap">
+          <button
+            class="program__tab{% if i.isActive %} program__tab--active{% endif %} js-tabs-btn"
+            data-block="program__tab"
+            data-tabs-tab="program-{{ loop.index }}">Поток {{ loop.index }}</button>
+        </div>
         {% endfor %}
       </div>
 
       <div class="program__content">
-        {% for i in range(0, 2) %}
+        {% for i in tabs %}
         <div
-          class="program__item js-tabs-item"
+          class="program__item{% if i.isActive %} program__item--active{% endif %} js-tabs-item"
           data-block="program__item"
-          data-tabs-item="program-{{ i + 1 }}">
+          data-tabs-item="program-{{ loop.index }}">
             {% include "partials/_program.html" %}
           </div>
         {% endfor %}

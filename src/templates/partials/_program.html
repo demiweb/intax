@@ -1,6 +1,11 @@
 {%set
 scedule = [
   {
+    time: '',
+    title: '',
+    text: '<em>Регистрация участников и приветственный бокал шампанского</em>'
+  },
+  {
     time: '9:00 - 9:10',
     title: 'Открытие конференции',
     text: '<em>Конференцию начинаем с концептуальных тем. В мире, где все меняется с головокружительной скоростью, изменения происходят и в одной 
@@ -113,17 +118,13 @@ scedule = [
 
 <!-- begin scedule -->
 <div class="scedule">
-  <div class="scedule__text">
-    <em>Регистрация участников и приветственный бокал шампанского</em>
-  </div>
-
   {% for i in scedule %}
   <div class="scedule__item scedule-item">
     <div class="scedule-item__time">{{ i.time | safe }}</div>
 
     <div class="scedule-item__content">
       {% if i.title %}
-      <div class="scedule-item__title">{{ i.text | safe }}</div>
+      <div class="scedule-item__title">{{ i.title | safe }}</div>
       {% endif %}
 
       {% if i.text %}

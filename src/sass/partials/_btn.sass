@@ -3,11 +3,11 @@
   display: inline-block
   text-align: center
   +font-title
-  
-  font-weight: 700
+  font-weight: 300  
   color: $white
-  padding: .75em 1em
+  padding: .7em 1em
   position: relative
+  letter-spacing: .1em
   +tr(color .3s, border-color .3s)
   +before
     position: absolute
@@ -36,6 +36,12 @@
 
   &--lg
     font-size: em(21)
+    padding: .75em 1em
+    font-weight: 700
+  &--wide
+    min-width: 450px
+  &--wide-md
+    min-width: 285px
   &--full
     min-width: 0
     width: 100%

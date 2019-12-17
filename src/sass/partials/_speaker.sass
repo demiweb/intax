@@ -1,0 +1,29 @@
+.speaker
+  +flex(flex-start, normal, column)
+  height: auto
+  &__img
+    +cover
+    padding-top: 110%
+    clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%)
+  &__content
+    padding-top: 25px
+    flex-grow: 1
+    +flex(flex-start, normal, column)
+    +md
+      padding-top: 15px
+  &__title
+    position: relative
+    padding-bottom: 10px
+    margin-bottom: 10px
+    +before
+      position: absolute
+      bottom: 0
+      left: 0
+      border-top: 1px solid  $accent
+      width: 190px
+  &__text
+    margin-bottom: 10px
+    flex-grow: 1
+    a
+      color: $blue
+      text-decoration: underline

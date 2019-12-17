@@ -9,17 +9,26 @@ h1, h2, h3, h4, h5, h6
   line-height: 1
   +font-title
   font-weight: 400
+  letter-spacing: .1em
   &--h1
-    +css-lock(32, 61, 320, 1399, font-size)
-    letter-spacing: .1em
+    +css-lock(32, 61, 320, 1399, font-size)    
     font-weight: 700
   &--h2
     +css-lock(26, 42, 320, 1399, font-size)
+    color: $c-title
+  &--h3
+    +css-lock(21, 24, 320, 1399, font-size)
+    color: $c-title
+  &--h5
+    font-size: 1em
     color: $c-title
   &--inherit
     color: inherit
 
 .text
+  a
+    color: $blue
+    text-decoration: underline
   p
     +notlast
       margin-bottom: 25px

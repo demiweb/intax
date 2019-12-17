@@ -1,0 +1,36 @@
+<!-- begin slider -->
+<div class="slider__wrap slider--sponsors__wrap">
+  <div class="swiper-container js-slider" data-slider="sponsors">
+    <div class="swiper-wrapper slider">
+      {% for i in range(0, 6) %}
+      <div class="swiper-slide slide sponsor">
+        <div class="sponsor__top">
+          <div class="sponsor__logo">
+            <img class="js-lazy" alt="" src="" data-src="./img/76.jpg"/>
+          </div>
+
+          <div class="sponsor__homepage">
+            <a href="#">www.eurofast.eu</a>
+          </div>
+        </div>
+
+        <div class="sponsor__content">
+          <div class="sponsor__title">
+            <h3 class="title title--h3">«Eurofast»</h3>
+          </div>
+
+          <div class="sponsor__text">«Eurofast» — региональная бизнес-консультационная организация в Юго-Восточной Европе и на Ближнем Востоке, имеет 22 филиала. Компания позиционирует себя как единый магазин для инвесторов и компаний... которые ищут профессио-нальные услуги в Регионе.</div>
+
+          <a href="#" class="a sponsor__link link link--arrow">Читать о компании</a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="slider__controls">
+    <button class="slider__prev prev js-slider-prev">{{ mixins.icon('left-arrow') }}</button>
+    <button class="slider__next next js-slider-next">{{ mixins.icon('left-arrow') }}</button>
+  </div>
+</div>
+<!-- end slider -->

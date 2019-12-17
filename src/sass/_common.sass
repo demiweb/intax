@@ -76,4 +76,56 @@ body
       margin-right: 1em
     +notlast
       margin-bottom: .5em
+
+.link
+  text-transform: uppercase
+  color: $accent
+  +font-title
+  font-weight: 300
+  letter-spacing: 0.1em
+  +hover
+    text-decoration: underline
+  &--arrow
+    display: inline-block
+    position: relative
+    +after
+      +icon-arrow(.5, .5, .05, currentColor, -45, em)
+      display: inline-block
+      margin-left: .5em
+      position: relative
+      top: -.2em
+
+.scroll-top
+  position: fixed
+  z-index: 10
+  bottom: 20px
+  right: 20px
+  color: $accent
+  text-transform: uppercase
+  font-size: em(21)
+  +font-title
+  font-weight: 700
+  letter-spacing: .1em
+  width: 50px
+  height: 130px
+  text-align: left
+  padding-top: 40px
+  +hover
+    .icon
+      transform: translate(-10px, 0)
+
+  &__title
+    display: block
+    +rotate(-90)
+  &__icon
+    display: block
+    position: absolute
+    z-index: 1
+    top: 0
+    left: 50%
+    transform: translate(-50%, 0) rotate(90deg)
+    font-size: 0
+    .icon
+      font-size: 35px
+      +tr(transform .3s)
     

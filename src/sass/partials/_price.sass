@@ -1,0 +1,92 @@
+.price-block
+  $this: &
+  background-color: $white
+  height: 100%
+  +notlast
+    margin-bottom: 45px
+    +lg
+      margin-bottom: 30px
+    +md
+      margin-bottom: 15px
+  &__top
+    @extend .title
+    @extend .title--h2
+    color: $white
+    background-color: $accent-dark
+    padding: .5em 1em
+    text-align: center
+  &__content
+    padding: 20px
+    +md
+      padding: 15px
+  &__hr
+    margin-left: -20px
+    margin-right: -20px
+    background-color: $gray-lightest
+    border-color: $gray-light
+    border: 0
+    height: 1px
+    margin-top: 35px
+    margin-bottom: 35px
+    +md
+      margin-left: -15px
+      margin-right: -15px
+  &__text
+    margin-bottom: 20px
+    font-size: em(24)
+    +md
+      margin-bottom: 10px
+  &__prices
+    @extend .grid
+  &__price-block
+    @extend ._col-6
+  &__btn
+    position: relative
+    z-index: 1
+    text-align: center
+
+
+  &--sm
+    height: auto
+    #{$this}__text
+      font-size: 1em
+
+.price-block-sm
+  text-align: center
+  &__text
+    margin-bottom: 15px
+  &__price
+    margin-bottom: 10px
+  &__btn
+    position: relative
+    z-index: 1
+
+
+.price
+  &__old
+    color: #4b1a0c
+    +font-title
+    letter-spacing: .1em
+    display: inline-block
+    position: relative
+    +before
+      position: absolute
+      border-top: 1px solid currentColor
+      z-index: 1
+      top: 50%
+      transform: translate(0, -50%)
+      left: 0
+      right: 0
+  &__price
+    color: $accent
+    text-transform: uppercase
+    +css-lock(26, 48, 320, 1399, font-size)
+    +font-title
+    line-height: 1
+    margin-bottom: .1em
+  &__price-title
+    display: inline-block
+    border-bottom: 2px solid $accent
+  &__date
+    color: $accent
+    font-size: em(14)

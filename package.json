@@ -111,6 +111,9 @@
     "core-js": "^3.5.0",
     "intersection-observer": "^0.7.0",
     "jquery": "^3.4.1",
-    "lozad": "^1.14.0"
+    "lozad": "^1.14.0",
+    "smoothscroll-polyfill": "^0.4.4",
+    "swiper": "^5.2.1",
+    "throttle-debounce": "^2.1.0"
   }
 }

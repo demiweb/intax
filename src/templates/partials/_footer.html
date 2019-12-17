@@ -1,5 +1,122 @@
 <!-- begin footer -->
 <footer class="footer">
-  hello from footer
+  <div class="container">
+    <div class="grid">
+      <div class="_col-2">
+        <div class="footer__logo">
+          <a href="/" class="logo">
+            <img class="js-lazy" alt="" src="" data-src="./img/logo-lg.png"/>
+          </a>
+        </div>
+      </div>
+
+      <div class="_col-2">
+        <div class="footer__block">
+          <div class="footer__title">
+            <h5 class="title title--h5 title--inherit">информация</h5>
+          </div>
+
+          <div class="footer__nav">
+            {{ mixins.list(
+              name = 'nav',
+              modifications = { wrap: 'nav--footer', item: '', link: '' },
+              list = [
+                { link: 'О компании' },
+                { link: 'О мероприятии' },
+                { link: 'Почему мы' },
+                { link: 'Вопрос/ответ' }
+              ]
+            ) }}
+          </div>
+        </div>
+      </div>
+
+      <div class="_col-2">
+        <div class="footer__block">
+          <div class="footer__title">
+            <h5 class="title title--h5 title--inherit">клиенту</h5>
+          </div>
+
+          <div class="footer__nav">
+            {{ mixins.list(
+              name = 'nav',
+              modifications = { wrap: 'nav--footer', item: '', link: '' },
+              list = [
+                { link: 'Цены' },
+                { link: 'Как принять участие' },
+                { link: 'Программа мероприятия' },
+                { link: 'Отзывы' }
+              ]
+            ) }}
+          </div>
+        </div>
+      </div>
+
+      <div class="_col-2">
+        <div class="footer__block">
+          <div class="footer__title">
+            <h5 class="title title--h5 title--inherit">контакты</h5>
+          </div>
+
+          <div class="footer__nav">
+            {{ mixins.list(
+              name = '',
+              modifications = { wrap: 'nav nav--footer', item: '', link: '' },
+              list = [
+                { link: '+38(044) 279-29-97', href: 'tel:+380442792997' },
+                { link: '+38(098) 495-99-03', href: 'tel:+380984959903' },
+                { item: '01001 Украина, Киев,' },
+                { item: 'ул. Софиевская, 18, офис 9' }
+              ]
+            ) }}
+          </div>
+        </div>
+      </div>
+
+      <div class="_col-2">
+        <div class="footer__block">
+          <div class="footer__title">
+            <h5 class="title title--h5 title--inherit">следите за нами</h5>
+          </div>
+
+          <div class="footer__nav">
+            {{ mixins.list(
+              name = '',
+              modifications = { wrap: 'nav nav--footer', item: '', link: '' },
+              list = [
+                { link: 'Info@intax-group.com', href: 'mailto:Info@intax-group.com' },
+                { item:  mixins.list(
+                  name = 'social',
+                  modifications = { wrap: 'social--sm', item: '', link: '' },
+                  list = [
+                    { link: mixins.icon('instagram') },
+                    { link: mixins.icon('linkedin-letters') },
+                    { link: mixins.icon('facebook-logo') }
+                  ]
+                ) }
+              ]
+            ) }}
+          </div>
+        </div>
+      </div>
+
+      <div class="_col-2">
+        <div class="footer__block">
+          <div class="footer__title">
+            <h5 class="title title--h5 title--inherit">дополнительно</h5>
+          </div>
+
+          <div class="footer__text">Правила участия и условия кофиденциальности</div>
+
+          <div class="footer__auth">
+            <div class="footer__auth-icon">
+              {{ mixins.icon('D') }}
+            </div>
+            <div class="footer__auth-text"><span>Разработка сайта</span> <a href="#">«Demiweb International»</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </footer>
 <!-- end footer -->

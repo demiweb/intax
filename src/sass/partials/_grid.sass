@@ -1,8 +1,19 @@
 $grid-gap: 30px
+\:root
+  --grid-gap: 30px
+
+$half-gap: calc(var(--grid-gap, #{$grid-gap}) / 2)
+$half-gap-negative: calc(var(--grid-gap, #{$grid-gap}) / -2)
+$gap: var(--grid-gap, $grid-gap)
+$gap-negative: calc(0px - var(--grid-gap, #{$grid-gap}))
 
 .grid
   margin-left: -$grid-gap / 2
   margin-right: -$grid-gap / 2
+  margin-bottom: -$grid-gap
+  margin-left: $half-gap-negative
+  margin-right: $half-gap-negative
+  margin-bottom: $gap-negative
   +flex(flex-start, normal, row, wrap)
 
 ._col
@@ -10,6 +21,9 @@ $grid-gap: 30px
   padding-left: $grid-gap / 2
   padding-right: $grid-gap / 2
   margin-bottom: $grid-gap
+  padding-left: $half-gap
+  padding-right: $half-gap
+  margin-bottom: $gap
 
 @for $i from 1 through 12
   ._col-#{$i}
@@ -59,3 +73,4 @@ $grid-gap: 30px
   ._offset-xl-#{$i}
     +xlmin
       margin-left: percentage($i/12)
+      

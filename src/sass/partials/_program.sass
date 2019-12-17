@@ -1,0 +1,76 @@
+.program
+  $this: &
+  &__tabs
+    @extend .grid
+    margin-bottom: 0
+  &__tab-wrap
+    @extend ._col-6
+    display: block
+    margin-bottom: 0
+  &__tab
+    display: block
+    width: 100%
+    box-shadow: 0px 0px 38px 0px rgba(0, 0, 0, 0.09)
+    background-color: $white
+    text-align: center
+    text-transform: uppercase
+    color: $accent
+    +font-title
+    font-size: em(36)
+    padding: .2em .5em
+    +tr(color .3s, background-color .3s)
+    +hover
+      @extend #{$this}__tab--active
+    &--active
+      background-color: $accent
+      color: $white
+  &__content
+    background-color: $white
+    padding: 25px 90px
+    box-shadow: 0px 0px 38px 0px rgba(0, 0, 0, 0.09)
+  &__item
+    +hidden
+    max-height: 0
+    overflow: hidden
+    +tr(opacity .3s, visibility .3s)
+    &--active
+      +visible
+      max-height: none
+      overflow: visible
+
+.scedule
+  &__item
+    +notlast
+      margin-bottom: 25px
+      +md
+        margin-bottom: 15px
+
+.scedule-item
+  +flex
+  &__time
+    text-transform: uppercase
+    color: $accent
+    text-align: right
+    font-size: em(30)
+    +font-title
+    width: percentage(130/1230)
+  &__content
+    width: percentage((1230 - 130) / 1230)
+    padding-left: 30px
+  &__title
+    font-weight: 700
+  &__text
+    em
+      color: $gray-light
+    p, blockquote
+      +notlast
+        margin-bottom: 35px
+        +md
+          margin-bottom: 20px
+    blockquote
+      font-style: italic
+      background-color: $white
+      box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.1)
+      padding: 1em
+      color: $gray-light
+
