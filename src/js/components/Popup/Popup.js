@@ -1,9 +1,9 @@
-import Popup from 'popup-simple'
+import PopupPlugin from 'popup-simple'
 import classes from '../../classNames'
 
 const classNames = classes.popup
 
-export default class MyPopup extends Popup {
+export default class Popup extends PopupPlugin {
   get infoCard() {
     return this.btn.closest(`.${classNames.info.card}`)
   }
@@ -76,11 +76,19 @@ export default class MyPopup extends Popup {
     }
   }
 
+  handleVideoClose() {
+    this.video = this.popup.querySelector('video')
+    if (!this.video) return
+
+    this.video.pause()
+  }
+
   onOpen() {
     if (this.name === 'info') this.addContent()
   }
 
   onClose() {
     if (this.name === 'info') this.removeContent()
+    if (this.name === 'video') this.handleVideoClose()
   }
 }

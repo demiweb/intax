@@ -16,6 +16,8 @@ export const {
   HAS_TEXT,
   IS_VALID,
   IS_FIXED,
+  IS_SHRINKED,
+  HAS_SHRINKED_HEADER,
 } = {
   IS_ACTIVE: 'active',
   IS_OPEN: 'open',
@@ -34,4 +36,6 @@ export const {
   HAS_TEXT: 'has-text',
   IS_VALID: 'valid',
   IS_FIXED: 'fixed',
+  IS_SHRINKED: 'shrinked',
+  HAS_SHRINKED_HEADER: 'has-shrinked-header',
 }

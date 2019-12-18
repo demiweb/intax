@@ -28,6 +28,7 @@ class App {
     this.methods = {}
     this.classNames = classNames
     this.dom = {
+      body: document.body,
       header: document.querySelector(`.${classNames.header}`),
     }
     this.state = {
@@ -76,27 +77,27 @@ class App {
     hasMenuOpen = !hasMenuOpen
     this.updateState({ hasMenuOpen })
 
-    App.toggleScroll(this.state.hasMenuOpen)
+    App.toggleScroll(this, this.state.hasMenuOpen)
   }
 
   onMenuClose() {
     this.updateState({ hasMenuOpen: false })
-    App.toggleScroll(this.state.hasMenuOpen)
+    App.toggleScroll(this, this.state.hasMenuOpen)
   }
 
-  static preventScroll() {
-    document.body.classList.add(NO_SCROLL)
+  static preventScroll(app) {
+    app.dom.body.classList.add(NO_SCROLL)
   }
 
-  static allowScroll() {
-    document.body.classList.remove(NO_SCROLL)
+  static allowScroll(app) {
+    app.dom.body.classList.remove(NO_SCROLL)
   }
 
-  static toggleScroll(condition) {
+  static toggleScroll(app, condition) {
     if (condition) {
-      App.preventScroll()
+      App.preventScroll(app)
     } else {
-      App.allowScroll()
+      App.allowScroll(app)
     }
   }
 }

@@ -304,7 +304,9 @@
                 <!-- end text -->
               </div>
               <div class="_col-sm-6">
-                <div class="section__img js-lazy" data-background-image="./img/about.jpg"></div>
+                <button class="section__img js-lazy js-popup-open" data-background-image="./img/about.jpg" data-popup-target="video">
+                  <img class="play-img js-lazy" alt="" src="" data-src="./img/play.png" />
+                </button>
               </div>
             </div>
           </div>
@@ -1917,6 +1919,14 @@
           </div>
         </div>
         <!-- end popup-content -->
+      </div>
+    </div>
+    <!-- end popup -->
+    <!-- begin popup -->
+    <div class="popup popup--full js-popup" data-popup="video">
+      <div class="popup__inner">
+        <button class="popup__close close js-popup-close"></button>
+        <video class="popup__video js-lazy" src="" controls data-src='./video/video-bg.mp4'></video>
       </div>
     </div>
     <!-- end popup -->

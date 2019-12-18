@@ -1,6 +1,8 @@
 import classNames from '../classNames'
 
 export default app => {
+  const BODY = app.dom.body
+
   document.addEventListener('click', e => {
     const btn =
       e.target.closest(`.${classNames.scrollTo.btn}`) ||
@@ -24,12 +26,14 @@ export default app => {
 
       const offset = header.offsetHeight
 
-      const top = target.getBoundingClientRect().top + document.body.scrollTop - offset
+      const top = target.getBoundingClientRect().top + BODY.scrollTop - offset
 
       window.scrollBy({
         top,
         behavior: 'smooth',
       })
+
+      if (app.state.hasMenuOpen) app.menu.close()
     }
   })
 }

@@ -25,9 +25,11 @@ $blue: #308ce2
 $header-top-height: 49px
 
 $header-bottom-height: 90px
-$header-bottom-height-fixed: 50px
+$header-bottom-height-shrinked: 50px
 
 $header-height: $header-top-height + $header-bottom-height
+$header-height-shrinked: $header-top-height + $header-bottom-height-shrinked
+$header-height-lg: $header-bottom-height-shrinked
 
 =windowHeight($offset)
   height: calc(100vh - #{$offset})

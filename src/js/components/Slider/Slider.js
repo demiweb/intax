@@ -1,4 +1,4 @@
-import MySlider from './MySlider'
+import SliderPlugin from './SliderPlugin'
 import classes from '../../classNames'
 
 const classNames = classes.slider
@@ -56,12 +56,6 @@ export default class Slider {
         slidesPerView: 3,
         loop: true,
         grabCursor: true,
-        // breakpoints: {
-        //   768: {
-        //     slidesPerView: 1,
-        //     centeredSlides: false,
-        //   },
-        // },
         on: {
           init: onInit,
         },
@@ -73,7 +67,7 @@ export default class Slider {
     this.containers.forEach(container => {
       if (container.classList.contains(classNames.plugin.initialized)) return
 
-      const slider = new MySlider(container, this.getOptions)
+      const slider = new SliderPlugin(container, this.getOptions)
       slider.init()
       this.sliders = [...this.sliders, slider]
     })

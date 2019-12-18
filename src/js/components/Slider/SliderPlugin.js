@@ -4,7 +4,7 @@ import classes from '../../classNames'
 
 const classNames = classes.slider
 
-export default class MySlider {
+export default class SliderPlugin {
   constructor(container, getOptions) {
     this.container = container
     this.name = container.dataset.slider

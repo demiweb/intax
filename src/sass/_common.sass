@@ -19,6 +19,14 @@ body
   &--loaded:not(#{$this}--no-fade-in)
     animation: fadeIn 1s
 
+.out
+  padding-top: $header-height
+  +tr(padding .3s)
+  .has-shrinked-header &
+    padding-top: $header-height-shrinked
+  +lg
+    padding-top: $header-height-lg
+
 .container
   max-width: 1440px
   margin-left: auto
@@ -111,6 +119,12 @@ body
   height: 130px
   text-align: left
   padding-top: 40px
+  +xs
+    bottom: 0
+    right: 0
+    padding-top: 25px
+    height: 110px
+    width: 40px
   +hover
     .icon
       transform: translate(-10px, 0)
@@ -129,6 +143,8 @@ body
     .icon
       font-size: 35px
       +tr(transform .3s)
+      +xs
+        font-size: 25px
 
 .close
   +icon-close(22, 2, currentColor)
@@ -137,4 +153,7 @@ body
   z-index: 1
   top: 15px
   right: 15px
+  +tr(color .3s)
+  +hover
+    color: $accent
     
