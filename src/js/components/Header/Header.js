@@ -1,30 +1,10 @@
-// export default class Header {
-//   constructor(el, app) {
-//     this.el = el
-//     this.app = app
-//   }
-
-//   handleScroll() {
-
-//   }
-
-//   _addListeners() {
-//     this.onScroll = throttle(66, this.handleScroll.bind(this))
-//     window.addEventListener('scroll', this.onScroll);
-//   }
-
-//   init() {
-//     this._addListeners()
-//   }
-// }
-
 import { throttle } from 'throttle-debounce'
 import classNames from '../../classNames'
 import { BEMblock } from '../../helpers'
 import { IS_FIXED } from '../../constants'
 
-export default () => {
-  const header = document.querySelector(`.${classNames.header}`)
+export default app => {
+  const { header } = app.dom
   if (!header) return
 
   const handleScroll = () => {

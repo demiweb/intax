@@ -83,6 +83,7 @@ body
   +font-title
   font-weight: 300
   letter-spacing: 0.1em
+  text-align: left
   +hover
     text-decoration: underline
   &--arrow
@@ -128,4 +129,12 @@ body
     .icon
       font-size: 35px
       +tr(transform .3s)
+
+.close
+  +icon-close(22, 2, currentColor)
+  display: block
+  position: absolute
+  z-index: 1
+  top: 15px
+  right: 15px
     

@@ -3,10 +3,15 @@
   <div class="swiper-container js-slider" data-slider="sponsors">
     <div class="swiper-wrapper slider">
       {% for i in range(0, 6) %}
-      <div class="swiper-slide slide sponsor">
+      <div class="swiper-slide slide sponsor js-popup-info-card">
         <div class="sponsor__top">
           <div class="sponsor__logo">
-            <img class="js-lazy" alt="" src="" data-src="./img/76.jpg"/>
+            <img
+              class="js-lazy js-popup-info-img"
+              alt=""
+              src=""
+              data-popup-info="./img/76.jpg"
+              data-src="./img/76.jpg"/>
           </div>
 
           <div class="sponsor__homepage">
@@ -16,12 +21,23 @@
 
         <div class="sponsor__content">
           <div class="sponsor__title">
-            <h3 class="title title--h3">«Eurofast»</h3>
+            <h3
+              class="title title--h3 js-popup-info-title"
+              data-popup-info="content">«Eurofast»</h3>
           </div>
 
-          <div class="sponsor__text">«Eurofast» — региональная бизнес-консультационная организация в Юго-Восточной Европе и на Ближнем Востоке, имеет 22 филиала. Компания позиционирует себя как единый магазин для инвесторов и компаний... которые ищут профессио-нальные услуги в Регионе.</div>
+          <div
+            class="sponsor__text text-overflow js-popup-info-text"
+            data-popup-info="content"
+          >
+            <p>«Eurofast» — региональная бизнес-консультационная организация в Юго-Восточной Европе и на Ближнем Востоке, имеет 22 филиала. Компания позиционирует себя как единый магазин для инвесторов и компаний... которые ищут профессио-нальные услуги в Регионе.</p>
+            <a href="#">www.eurofast.eu</a>
+          </div>
 
-          <a href="#" class="a sponsor__link link link--arrow">Читать о компании</a>
+          <button
+            class="sponsor__link link link--arrow js-popup-open"
+            data-popup-target="info"
+          >Читать о компании</button>
         </div>
       </div>
       {% endfor %}

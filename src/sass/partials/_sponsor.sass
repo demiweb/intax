@@ -2,6 +2,8 @@
   box-shadow: 0px 0px 10px 0px rgba(1, 0, 0, 0.09)
   background-color: $white
   padding: 30px
+  height: auto
+  +flex(flex-start, normal, column)
   +lg
     padding: 20px
   +md
@@ -23,3 +25,8 @@
     text-align: center
     width: 50%
     padding-left: 10px
+  &__content
+    flex-grow: 1
+    +flex(flex-start, normal, column)
+  &__text
+    flex-grow: 1

@@ -1,0 +1,66 @@
+.popup
+  position: fixed
+  z-index: 25
+  overflow: auto
+  padding: 15px
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  background-color: rgba($black, .7)
+  +vertical
+  +ready
+    +tr(opacity .3s, visibility .3s)
+  +hidden
+  &--active
+    +visible
+  &__inner
+    display: inline-block
+    vertical-align: middle
+    background-color: $white
+    font-size: $fz
+    width: 100%
+    max-width: 930px
+    position: relative
+    box-shadow: 0px 3px 77px 0px rgba(0, 0, 0, 0.33)
+    padding: 15px 30px 50px 15px
+    +md
+      padding: 15px
+      padding-top: 40px
+    +sm
+      font-size: $fz-sm-px
+  &__close
+    color: $c-title
+
+.popup-content
+  text-align: left
+  +flex
+  +xs
+    display: block
+  &__left
+    width: percentage(220/ 875)
+    +xs
+      width: auto
+      margin-bottom: 15px
+  &__content
+    width: percentage((875 - 220) / 875)
+    padding-left: 30px
+    +sm
+      padding-left: 15px
+    +xs
+      width: auto
+      padding-left: 0
+  &__img
+    font-size: 0
+    img
+      width: 100%
+      +xs
+        // width: auto
+    // +cover
+    // padding-top: 40%
+  &__title
+    margin-bottom: 10px
+  &__text
+    a
+      color: $blue
+      text-decoration: underline

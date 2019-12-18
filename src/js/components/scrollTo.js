@@ -1,6 +1,6 @@
 import classNames from '../classNames'
 
-export default () => {
+export default app => {
   document.addEventListener('click', e => {
     const btn =
       e.target.closest(`.${classNames.scrollTo.btn}`) ||
@@ -18,12 +18,11 @@ export default () => {
 
       if (!target) return
       e.preventDefault()
-      const header = document.querySelector('.header')
-      if (!header) return
-      const headerBottom = header.querySelector('.header__bottom')
-      if (!headerBottom) return
+      const { header } = app.dom
 
-      const offset = headerBottom.offsetHeight
+      if (!header) return
+
+      const offset = header.offsetHeight
 
       const top = target.getBoundingClientRect().top + document.body.scrollTop - offset
 

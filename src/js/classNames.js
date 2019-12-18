@@ -28,4 +28,16 @@ export default {
     btn: 'js-scroll-to',
     top: 'js-scroll-to-top',
   },
+  menu: {
+    burger: 'js-burger',
+    menu: 'js-menu',
+  },
+  popup: {
+    info: {
+      card: 'js-popup-info-card',
+      title: 'js-popup-info-title',
+      text: 'js-popup-info-text',
+      img: 'js-popup-info-img',
+    },
+  },
 }

@@ -18,15 +18,36 @@ import classNames from './classNames'
 import Tabs from './components/Tabs/Tabs'
 import Slider from './components/Slider/Slider'
 import Accordion from './components/Accordion/Accordion'
+import Menu from './components/Menu/Menu'
+import Popup from './components/Popup/Popup'
+
+import { NO_SCROLL } from './constants'
 
 class App {
   constructor() {
     this.methods = {}
     this.classNames = classNames
+    this.dom = {
+      header: document.querySelector(`.${classNames.header}`),
+    }
+    this.state = {
+      hasMenuOpen: false,
+    }
 
-    this.tabs = new Tabs(this)
-    this.slider = new Slider(`.${classNames.slider.container}`, this)
-    this.accordion = new Accordion(this)
+    this.tabs = new Tabs()
+    this.slider = new Slider(`.${classNames.slider.container}`)
+    this.accordion = new Accordion()
+    this.menu = new Menu()
+    this.menu.onToggle = this.onMenuToggle.bind(this)
+    this.menu.onClose = this.onMenuClose.bind(this)
+    this.popup = new Popup()
+  }
+
+  updateState(state) {
+    this.state = {
+      ...this.state,
+      ...state,
+    }
   }
 
   initMethods() {
@@ -36,7 +57,7 @@ class App {
     this.methods.toggleHeader = toggleHeader
     this.methods.scrollTo = scrollTo
 
-    Object.values(this.methods).forEach(fn => fn())
+    Object.values(this.methods).forEach(fn => fn(this))
   }
 
   init() {
@@ -46,6 +67,37 @@ class App {
     this.tabs.init()
     this.slider.init()
     this.accordion.init()
+    this.menu.init()
+    this.popup.init()
+  }
+
+  onMenuToggle() {
+    let { hasMenuOpen } = this.state
+    hasMenuOpen = !hasMenuOpen
+    this.updateState({ hasMenuOpen })
+
+    App.toggleScroll(this.state.hasMenuOpen)
+  }
+
+  onMenuClose() {
+    this.updateState({ hasMenuOpen: false })
+    App.toggleScroll(this.state.hasMenuOpen)
+  }
+
+  static preventScroll() {
+    document.body.classList.add(NO_SCROLL)
+  }
+
+  static allowScroll() {
+    document.body.classList.remove(NO_SCROLL)
+  }
+
+  static toggleScroll(condition) {
+    if (condition) {
+      App.preventScroll()
+    } else {
+      App.allowScroll()
+    }
   }
 }
 

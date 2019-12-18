@@ -5,8 +5,7 @@ import classes from '../../classNames'
 const classNames = classes.accordion
 
 export default class Accordion {
-  constructor(app, options = {}) {
-    this.app = app
+  constructor(options = {}) {
     this.options = options
     this.classes = {}
   }

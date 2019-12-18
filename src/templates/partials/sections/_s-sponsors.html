@@ -1,17 +1,27 @@
+{%set
+blocks = [
+  { id: 'sponsors', title: 'Спонсоры', btn: { title: 'стать спонсором' } },
+  { id: 'exposition', title: 'выставка', btn: { title: 'разместить стенд' } }
+]
+%}
+
 <!-- begin section -->
 <section class="section">
   <div class="container">
-    <div id="sponsors" class="section__block">
-      <h2 class="title title--h2 text-center">Спонсоры intax forum</h2>
+    {% for i in blocks %}
+    <div id="{{ i.id }}" class="section__block">
+      <h2 class="title title--h2 text-center">{{ i.title | safe }}</h2>
 
       {% include "partials/_sponsors-slider.html" %}
-    </div>
 
-    <div id="exposition" class="section__block">
-      <h2 class="title title--h2 text-center">выставка intax forum</h2>
-
-      {% include "partials/_sponsors-slider.html" %}
+      <div class="section__btn">
+        {{ mixins.btn(
+          title = i.btn.title,
+          mod = 'btn--wide'
+        ) }}
+      </div>
     </div>
+    {% endfor %}
   </div>
 </section>
 <!-- end section -->

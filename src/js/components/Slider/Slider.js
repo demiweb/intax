@@ -4,8 +4,7 @@ import classes from '../../classNames'
 const classNames = classes.slider
 
 export default class Slider {
-  constructor(slider, app) {
-    this.app = app
+  constructor(slider) {
     this.sliderClass = slider
     this.sliders = []
   }
@@ -13,21 +12,42 @@ export default class Slider {
   _getOptions() {
     this.getOptions = ({ navigation, onInit }) => ({
       speakers: {
-        slidesPerView: 4,
+        slidesPerView: 1,
         grabCursor: true,
-        spaceBetween: 30,
+        spaceBetween: 20,
         navigation,
         on: {
           init: onInit,
         },
+        breakpoints: {
+          480: {
+            slidesPerView: 2,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+          992: {
+            slidesPerView: 4,
+          },
+        },
       },
       sponsors: {
-        slidesPerView: 3,
+        slidesPerView: 1,
         grabCursor: true,
-        spaceBetween: 30,
+        spaceBetween: 20,
         navigation,
         on: {
           init: onInit,
+        },
+        breakpoints: {
+          576: {
+            slidesPerView: 2,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
         },
       },
       gallery: {

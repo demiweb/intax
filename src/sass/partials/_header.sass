@@ -1,7 +1,7 @@
 .header
   $this: &
   position: relative
-  z-index: 10
+  z-index: 15
   &__inner
     +flex(flex-start, center)
   &__top
@@ -50,12 +50,17 @@
       bottom: 0
       right: 0
       left: 0
-      z-index: 10
+      z-index: 15
       background-color: $accent
       background-image: linear-gradient( to top, rgb(48,42,42) 0%, rgb(71,54,41) 100%)
       overflow: auto
       padding: 15px
       +vertical
+      +hidden
+      +ready
+        +tr(opacity .3s, visibility .3s)
+      &--open
+        +visible
   &__nav-in
     +lg
       display: inline-block
@@ -157,7 +162,8 @@
       top: 5px
     &::before
       bottom: 5px
-  &--active 
+  &--active
+    z-index: 20
     span
       background-color: transparent
       &::before

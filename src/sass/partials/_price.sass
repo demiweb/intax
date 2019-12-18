@@ -47,14 +47,26 @@
 
 
   &--sm
-    height: auto
+    // height: auto
+    +flex(flex-start, normal, column)
+    #{$this}__content
+      +flex(flex-start, normal, column)
+      flex-grow: 1
     #{$this}__text
       font-size: 1em
+      flex-grow: 1
+
+// .price-blocks-sm
+//   +lg
+//     +flex()
 
 .price-block-sm
   text-align: center
+  +flex(flex-start, normal, column)
+  height: 100%
   &__text
     margin-bottom: 15px
+    flex-grow: 1
   &__price
     margin-bottom: 10px
   &__btn

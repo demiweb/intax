@@ -35,3 +35,19 @@ h1, h2, h3, h4, h5, h6
       +md
         margin-bottom: 15px
 
+.title-under
+  position: relative  
+  padding-bottom: 10px
+  +before
+    position: absolute
+    bottom: 0
+    left: 0
+    border-top: 1px solid  $accent
+    width: 190px
+
+.text-overflow
+  overflow: hidden
+  max-height: 7em
+  display: -webkit-box
+  -webkit-line-clamp: 4
+  -webkit-box-orient: vertical

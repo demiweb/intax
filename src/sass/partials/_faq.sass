@@ -13,12 +13,17 @@
     padding: 50px 50px 50px 85px
     text-align: left
     position: relative
+    +md
+      padding: 30px 30px 30px 45px
     +before
       +icon-arrow(10, 10, 1, $accent, -45)
       position: absolute
       z-index: 1
       top: 50px
       right: 30px
+      +md
+        top: 30px
+        right: 15px
     &--active
       padding-bottom: 20px
       +before
@@ -31,8 +36,13 @@
     left: 30px
     .icon
       font-size: em(45)
+    +md
+      top: 15px
+      left: 5px
   &__content
     display: none
     padding: 0 50px 50px 85px
+    +md
+      padding: 0 30px 30px 45px
     &--open
       display: block

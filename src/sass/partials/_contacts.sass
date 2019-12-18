@@ -1,6 +1,7 @@
 .contacts-block
+  max-width: 525px
   &__form
-    max-width: 525px
+    
     margin-bottom: 40px
     +lg
       margin-bottom: 20px
@@ -8,12 +9,13 @@
 .contacts
   +clr
   .contact
-    float: left
+    float: right
     width: 50%
     margin-bottom: 30px
     +md
       margin-bottom: 15px
     &--lg
+      float: left
       padding-right: 10px
 
 .contact
@@ -30,8 +32,13 @@
 
 .map
   height: 100%
+  padding-top: 50%
   position: relative
   background-color: $gray-light
+  +xs
+    padding-top: 60%
+  +xss
+    padding-top: 80%
   iframe
     position: absolute
     width: 100%

@@ -5,8 +5,7 @@ import classes from '../../classNames'
 const classNames = classes.tabs
 
 export default class Tabs {
-  constructor(app, options = {}) {
-    this.app = app
+  constructor(options = {}) {
     this.options = options
     this.classes = {}
   }

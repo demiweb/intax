@@ -44,7 +44,7 @@ rightBlocks = [
     </div>
 
     <div class="grid">
-      <div class="_col-8">
+      <div class="_col-lg-8">
         <!-- begin price-block -->
         <div class="price-block">
           <div class="price-block__top">Стать делегатом</div>
@@ -71,7 +71,7 @@ rightBlocks = [
 
                   <div class="price-block-sm__btn">
                     {{ mixins.btn(
-                      title = 'узнать условия',
+                      title = 'Зарегистрироваться',
                       mod = 'btn--wide-md'
                     ) }}
                   </div>
@@ -85,25 +85,30 @@ rightBlocks = [
         <!-- end price-block -->
       </div>
 
-      <div class="_col-4">
+      <div class="_col-lg-4">
+        <div class="grid">         
+        
         {% for i in rightBlocks %}
-        <!-- begin price-block -->
-        <div class="price-block price-block--sm">
-          <div class="price-block__top">{{ i.title | safe }}</div>
+        <div class="_col-lg-12 _col-sm-6">
+          <!-- begin price-block -->
+          <div class="price-block price-block--sm">
+            <div class="price-block__top">{{ i.title | safe }}</div>
 
-          <div class="price-block__content">
-            <div class="price-block__text">{{ i.text | safe }}</div>
+            <div class="price-block__content">
+              <div class="price-block__text">{{ i.text | safe }}</div>
 
-            <div class="price-block__btn">
-              {{ mixins.btn(
-                title = i.btn.title,
-                mod = 'btn--wide-md'
-              ) }}
+              <div class="price-block__btn">
+                {{ mixins.btn(
+                  title = i.btn.title,
+                  mod = 'btn--wide-md'
+                ) }}
+              </div>
             </div>
           </div>
+          <!-- end price-block -->
         </div>
-        <!-- end price-block -->
         {% endfor %}
+        </div>
       </div>
     </div>
   </div>
