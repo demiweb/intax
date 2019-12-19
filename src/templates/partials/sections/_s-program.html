@@ -6,7 +6,7 @@ tabs = [
 %}
 
 <!-- begin section -->
-<section id="program" class="section pb-0">
+<section id="program" class="section pb-0 js-scroll-to-section">
   <div class="container">
     <div class="section__title text-center">
       <h2 class="title title--h2">программа</h2>
@@ -39,7 +39,9 @@ tabs = [
     <div class="section__btn">
       {{ mixins.btn(
         title = 'Зарегистрироваться',
-        mod = 'btn--wide-md'
+        mod = 'btn--wide-md js-popup-open',
+        href = false,
+        attributes = { 'data-popup-target': 'registration' }
       ) }}
     </div>
   </div>

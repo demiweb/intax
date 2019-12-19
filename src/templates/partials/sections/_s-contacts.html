@@ -30,8 +30,39 @@ contacts = [
 ]
 %}
 
+{%set
+form = {
+  btn: {
+    title: 'задать вопрос'
+  },
+  fields: [
+    {
+      name: 'input',
+      placeholder: 'имя',
+      type: 'text',
+      fieldClass: '',
+      fieldAttributes: ''
+    },
+    {
+      name: 'input',
+      placeholder: '+38 (_ _ _) - _ _ _ - _ _ - _ _',
+      type: 'tel',
+      fieldClass: '',
+      fieldAttributes: ''
+    },
+    {
+      name: 'textarea',
+      placeholder: 'краткое сообщение',
+      type: '',
+      fieldClass: 'js-textarea',
+      fieldAttributes: ''
+    }
+  ]
+}
+%}
+
 <!-- begin section -->
-<section id="contacts" class="section section--gray">
+<section id="contacts" class="section section--gray js-scroll-to-section">
   <div class="container">
     <div class="grid">
       <div class="_col-md-6">

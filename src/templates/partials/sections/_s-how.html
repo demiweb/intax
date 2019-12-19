@@ -37,7 +37,7 @@ rightBlocks = [
 %}
 
 <!-- begin section -->
-<section id="prices" class="section section--gray">
+<section id="prices" class="section section--gray js-scroll-to-section">
   <div class="container">
     <div class="section__title text-center">
       <h2 class="title title--h2">как принять участие ?</h2>
@@ -72,7 +72,9 @@ rightBlocks = [
                   <div class="price-block-sm__btn">
                     {{ mixins.btn(
                       title = 'Зарегистрироваться',
-                      mod = 'btn--wide-md'
+                      mod = 'btn--wide-md js-popup-open',
+                      href = false,
+                      attributes = { 'data-popup-target': 'registration' }
                     ) }}
                   </div>
                 </div>

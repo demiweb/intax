@@ -21,6 +21,8 @@
     z-index: 1
     +windowHeight($header-height)
     +flex(center, normal, column)
+    .has-shrinked-header &
+      +windowHeight($header-height-shrinked)
   &__content
     max-width: 750px
     margin-left: auto

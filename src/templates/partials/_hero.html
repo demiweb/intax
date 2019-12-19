@@ -35,14 +35,18 @@
           <div class="hero__btn">
             {{ mixins.btn(
               title = 'зарегистрироваться',
-              mod = 'btn--lg btn--full'
+              mod = 'btn--lg btn--full js-popup-open',
+              href = false,
+              attributes = { 'data-popup-target': 'registration' }
             ) }}
           </div>
 
           <div class="hero__btn">
             {{ mixins.btn(
               title = 'стать спонсором',
-              mod = 'btn--lg btn--full btn--transp'
+              mod = 'btn--lg btn--full btn--transp js-popup-open',
+              href = false,
+              attributes = { 'data-popup-target': 'sponsor-reg' }
             ) }}
           </div>
         </div>

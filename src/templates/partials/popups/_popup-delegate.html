@@ -1,0 +1,166 @@
+{%set
+form = {
+  title: 'стать делегатом',
+  subttl: 'Скидка на участие двух и более делегатов от одной организации 
+составляет 20% при условии одновременной регистрации',
+  btn: { title: 'Зарегистрироваться' },
+  blocks: [
+    {
+      title: '',
+      fields: [
+        {
+          name: 'input',
+          type: 'text',
+          placeholder: 'название компании',
+          fieldClass: '',
+          fieldAttributes: {},
+          options: [],
+          label: { last: '' }
+        },
+        {
+          name: 'select',
+          type: '',
+          placeholder: '',
+          fieldClass: 'js-select',
+          fieldAttributes: {},
+          options: [
+            { value: 'placeholder', option: 'сфера деятельности' },
+            { value: '1', option: 'сфера деятельности1' },
+            { value: '2', option: 'сфера деятельности2' },
+            { value: '3', option: 'сфера деятельности3' }
+          ],
+          label: { last: '' }
+        },
+        {
+          name: 'select',
+          type: '',
+          placeholder: '',
+          fieldClass: 'js-select',
+          fieldAttributes: {},
+          options: [
+            { value: 'placeholder', option: 'страна' },
+            { value: '1', option: 'страна1' },
+            { value: '2', option: 'страна2' },
+            { value: '3', option: 'страна3' },
+            { value: '4', option: 'страна4' }
+          ],
+          label: { last: '' }
+        },
+        {
+          name: 'input',
+          type: 'text',
+          placeholder: 'Web-сайт',
+          fieldClass: '',
+          fieldAttributes: {},          
+          label: { last: '' }
+        },
+        {
+          name: 'select',
+          type: '',
+          placeholder: '',
+          fieldClass: 'js-select',
+          fieldAttributes: {},
+          options: [
+            { value: 'placeholder', option: 'Количество участников' },
+            { value: '1', option: 'Количество участников1' },
+            { value: '2', option: 'Количество участников2' },
+            { value: '3', option: 'Количество участников3' }
+          ],
+          label: { last: '' }
+        }
+      ]
+    },
+    {
+      title: 'Участник №1',
+      fields: [
+        {
+          name: 'input',
+          type: 'text',
+          placeholder: 'Имя, фамилия ',
+          fieldClass: '',
+          fieldAttributes: {},
+          options: [],
+          label: { last: '' }
+        },
+        {
+          name: 'input',
+          type: 'text',
+          placeholder: 'должность ',
+          fieldClass: '',
+          fieldAttributes: {},
+          options: [],
+          label: { last: '' }
+        },
+        {
+          name: 'input',
+          type: 'tel',
+          placeholder: 'Tелефон ',
+          fieldClass: '',
+          fieldAttributes: {},
+          options: [],
+          label: { last: '' }
+        },
+        {
+          name: 'input',
+          type: 'email',
+          placeholder: 'Электронный адрес ',
+          fieldClass: '',
+          fieldAttributes: {},
+          options: [],
+          label: { last: '' }
+        }
+      ]
+    },
+    {
+      title: '',
+      fields: [
+        {
+          name: 'select',
+          type: '',
+          placeholder: '',
+          fieldClass: 'js-select',
+          fieldAttributes: {},
+          options: [
+            { value: 'placeholder', option: 'откуда вы узнали о конференции?' },
+            { value: '1', option: 'откуда вы узнали о конференции?1' },
+            { value: '2', option: 'откуда вы узнали о конференции?2' },
+            { value: '3', option: 'откуда вы узнали о конференции?3' }
+          ],
+          label: { last: '' }
+        },
+        {
+          wrapMod: 'form__field--checkbox',
+          name: 'checkbox',
+          type: 'checkbox',
+          placeholder: '',
+          fieldClass: '',
+          fieldAttributes: {},
+          options: [],
+          label: { last: '<span> Мне нужна скидка на проживание в номере отеля Lotte</span>' }
+        },
+        {
+          wrapMod: 'form__field--checkbox',
+          name: 'checkbox',
+          type: 'checkbox',
+          placeholder: '',
+          fieldClass: '',
+          fieldAttributes: { checked: '' },
+          options: [],
+          label: { last: '<span>Я согласен с <a href="#">Условиями участия</a> и даю согласие на обработку и хранение 
+моих данных согласно действующего законодательства</span>' }
+        }
+      ]
+    }
+  ]
+}
+%}
+
+<!-- begin popup -->
+<div class="popup popup--form js-popup" data-popup="registration">
+  <div class="popup__inner">
+    <button class="popup__close close js-popup-close"></button>
+
+    {% include "partials/_form.html" %}
+  </div>
+</div>
+<!-- end popup -->

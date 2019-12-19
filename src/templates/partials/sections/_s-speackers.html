@@ -94,7 +94,7 @@ slider = [
 %}
 
 <!-- begin section -->
-<section id="speakers" class="section pb-0">
+<section id="speakers" class="section pb-0 js-scroll-to-section">
   <div class="container">
     {# <div class="text-center"> #}
       <h2 class="title title--h2 text-center">Спикеры</h2>
@@ -143,7 +143,9 @@ slider = [
     <div class="section__btn text-center">
       {{ mixins.btn(
         title = 'стать спикером',
-        mod = 'btn--wide'
+        mod = 'btn--wide js-popup-open',
+        href = false,
+        attributes = { 'data-popup-target': 'speaker-reg' }
       ) }}
     </div>
   </div>

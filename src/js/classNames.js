@@ -27,6 +27,7 @@ export default {
   scrollTo: {
     btn: 'js-scroll-to',
     top: 'js-scroll-to-top',
+    section: 'js-scroll-to-section',
   },
   menu: {
     burger: 'js-burger',
@@ -41,4 +42,5 @@ export default {
     },
   },
   textarea: 'js-textarea',
+  select: 'js-select',
 }

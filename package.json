@@ -113,6 +113,7 @@
     "jquery": "^3.4.1",
     "lozad": "^1.14.0",
     "popup-simple": "^1.0.5",
+    "select-custom": "^1.1.9",
     "smoothscroll-polyfill": "^0.4.4",
     "swiper": "^5.2.1",
     "throttle-debounce": "^2.1.0"

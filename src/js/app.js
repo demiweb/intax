@@ -13,6 +13,7 @@ import setLazy from './components/setLazy'
 import toggleHeader from './components/Header/Header'
 import scrollTo from './components/scrollTo'
 import setTextareaHeight from './components/Textarea/Textarea'
+import setSelects from './components/Select/Select'
 
 import classNames from './classNames'
 
@@ -31,6 +32,10 @@ class App {
     this.dom = {
       body: document.body,
       header: document.querySelector(`.${classNames.header}`),
+      scrollTo: {
+        sections: [...document.querySelectorAll(`.${classNames.scrollTo.section}`)],
+        btns: [...document.querySelectorAll(`.${classNames.scrollTo.btn}`)],
+      },
     }
     this.state = {
       hasMenuOpen: false,
@@ -69,6 +74,7 @@ class App {
     this.methods.toggleHeader = toggleHeader
     this.methods.scrollTo = scrollTo
     this.methods.setTextareaHeight = setTextareaHeight
+    this.methods.setSelects = setSelects
 
     Object.values(this.methods).forEach(fn => fn(this))
   }
