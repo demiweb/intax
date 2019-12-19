@@ -12,6 +12,7 @@ import setHTMLClassNames from './components/setHTMLClassNames'
 import setLazy from './components/setLazy'
 import toggleHeader from './components/Header/Header'
 import scrollTo from './components/scrollTo'
+import setTextareaHeight from './components/Textarea/Textarea'
 
 import classNames from './classNames'
 
@@ -57,6 +58,7 @@ class App {
     this.methods.setLazy = setLazy
     this.methods.toggleHeader = toggleHeader
     this.methods.scrollTo = scrollTo
+    this.methods.setTextareaHeight = setTextareaHeight
 
     Object.values(this.methods).forEach(fn => fn(this))
   }

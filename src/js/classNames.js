@@ -40,4 +40,5 @@ export default {
       img: 'js-popup-info-img',
     },
   },
+  textarea: 'js-textarea',
 }
