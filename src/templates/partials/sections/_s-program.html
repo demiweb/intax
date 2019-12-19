@@ -19,7 +19,6 @@ tabs = [
         <div class="program__tab-wrap">
           <button
             class="program__tab{% if i.isActive %} program__tab--active{% endif %} js-tabs-btn"
-            data-block="program__tab"
             data-tabs-tab="program-{{ loop.index }}">Поток {{ loop.index }}</button>
         </div>
         {% endfor %}
@@ -29,7 +28,6 @@ tabs = [
         {% for i in tabs %}
         <div
           class="program__item{% if i.isActive %} program__item--active{% endif %} js-tabs-item"
-          data-block="program__item"
           data-tabs-item="program-{{ loop.index }}">
             {% include "partials/_program.html" %}
           </div>

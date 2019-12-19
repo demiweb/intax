@@ -1,4 +1,4 @@
-import { IS_ACTIVE, IS_OPEN, NO_SCROLL } from '../../constants'
+import { IS_ACTIVE, IS_OPEN } from '../../constants'
 import { BEMblock } from '../../helpers'
 import classes from '../../classNames'
 

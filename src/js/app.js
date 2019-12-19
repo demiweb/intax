@@ -36,9 +36,19 @@ class App {
       hasMenuOpen: false,
     }
 
-    this.tabs = new Tabs()
+    this.tabs = new Tabs({
+      classNames: {
+        btn: 'program__tab',
+        item: 'program__item',
+      },
+    })
     this.slider = new Slider(`.${classNames.slider.container}`)
-    this.accordion = new Accordion()
+    this.accordion = new Accordion({
+      classNames: {
+        btn: 'question__btn',
+        item: 'question__content',
+      },
+    })
     this.menu = new Menu()
     this.menu.onToggle = this.onMenuToggle.bind(this)
     this.menu.onClose = this.onMenuClose.bind(this)

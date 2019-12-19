@@ -1,5 +1,4 @@
 import { throttle } from 'throttle-debounce'
-import classNames from '../../classNames'
 import { BEMblock } from '../../helpers'
 import { IS_SHRINKED, HAS_SHRINKED_HEADER } from '../../constants'
 
