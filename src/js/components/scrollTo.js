@@ -8,6 +8,7 @@ export default app => {
   const BODY = app.dom.body
   const { sections, btns } = app.dom.scrollTo
   const { header } = app.dom
+  const navLinkClass = 'nav__link'
 
   function handleClick(e) {
     const btn = e.target.closest(`.${classNames.btn}`) || e.target.closest(`.${classNames.top}`)
@@ -45,8 +46,8 @@ export default app => {
         const [currentBtn] = btns.filter(btn => btn.getAttribute('href') === `#${id}`)
 
         btns.forEach(btn => {
-          if (btn !== currentBtn) BEMblock(btn, 'nav').removeMod(IS_CURRENT)
-          BEMblock(currentBtn, 'nav').addMod(IS_CURRENT)
+          if (btn !== currentBtn) BEMblock(btn, navLinkClass).removeMod(IS_CURRENT)
+          BEMblock(currentBtn, navLinkClass).addMod(IS_CURRENT)
         })
       }
     })

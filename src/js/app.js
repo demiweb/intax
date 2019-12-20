@@ -54,7 +54,12 @@ class App {
         item: 'question__content',
       },
     })
-    this.menu = new Menu()
+    this.menu = new Menu({
+      classNames: {
+        btn: 'burger',
+        menu: 'header__nav',
+      },
+    })
     this.menu.onToggle = this.onMenuToggle.bind(this)
     this.menu.onClose = this.onMenuClose.bind(this)
     this.popup = new Popup()
