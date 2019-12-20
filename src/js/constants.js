@@ -1,6 +1,7 @@
 export const {
   IS_ACTIVE,
   IS_OPEN,
+  IS_CURRENT,
   // IS_VISIBLE,
   IS_READY,
   // IS_LOADING,
@@ -21,6 +22,7 @@ export const {
 } = {
   IS_ACTIVE: 'active',
   IS_OPEN: 'open',
+  IS_CURRENT: 'current',
   // IS_VISIBLE: 'visible',
   IS_READY: 'is-ready',
   // IS_LOADING: 'loading',

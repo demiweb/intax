@@ -1,7 +1,6 @@
 import classes from '../classNames'
-// import { IS_ACTIVE } from '../constants'
-
-const IS_ACTIVE = 'is-active'
+import { IS_CURRENT } from '../constants'
+import { BEMblock } from '../helpers'
 
 const classNames = classes.scrollTo
 
@@ -46,8 +45,8 @@ export default app => {
         const [currentBtn] = btns.filter(btn => btn.getAttribute('href') === `#${id}`)
 
         btns.forEach(btn => {
-          if (btn !== currentBtn) btn.classList.remove(IS_ACTIVE)
-          currentBtn.classList.add(IS_ACTIVE)
+          if (btn !== currentBtn) BEMblock(btn, 'nav').removeMod(IS_CURRENT)
+          BEMblock(currentBtn, 'nav').addMod(IS_CURRENT)
         })
       }
     })
@@ -57,7 +56,7 @@ export default app => {
     if (!sections.length || !btns.length) return
 
     const observer = new IntersectionObserver(handleIntersecting, {
-      threshold: 0.05,
+      threshold: 0.2,
     })
     sections.forEach(section => {
       observer.observe(section)
