@@ -11,10 +11,17 @@ export default () => {
   }
 
   selects.forEach(select => {
-    if (select.classList.contains('custom-select')) return
+    if (
+      select.parentNode &&
+      select.parentNode.classList &&
+      select.parentNode.classList.contains('custom-select')
+    )
+      return
 
     const name = select.dataset.type
     const mySelect = new CustomSelect(select, options[name])
     mySelect.init()
+
+    select.parentNode.setAttribute('tabindex', '0')
   })
 }

@@ -58,6 +58,9 @@
   color: $gray-light
   user-select: none
   +font-title
+  &:focus
+    #{$this}__opener
+      border-color: $accent
   select
     position: absolute
     +hidden
