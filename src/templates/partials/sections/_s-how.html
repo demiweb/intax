@@ -25,13 +25,19 @@ rightBlocks = [
   {
     title: 'Стать спикером',
     text: 'Продвигайте Вашу компанию, лично общайтесь с максимальным количеством участников и донесите информацию об услугах вашей компании при помощи экспозиционного стенда.',
-    btn: { title: 'узнать условия' }
+    btn: {
+      title: 'узнать условия',
+      attributes: { 'data-popup-target': 'speaker-reg' }
+    }
   },
   {
     title: 'стать спонсором',
     text: 'Подтвердите свои лидирующие позиции на рынке 
 с помощью эксклюзивных маркетинговых инструментов, а также доклада, выставочного стенда и многого другого.',
-    btn: { title: 'Получить предложение' }
+    btn: {
+      title: 'Получить предложение',
+      attributes: { 'data-popup-target': 'sponsor-reg' }
+    }
   }
 ]
 %}
@@ -102,7 +108,8 @@ rightBlocks = [
               <div class="price-block__btn">
                 {{ mixins.btn(
                   title = i.btn.title,
-                  mod = 'btn--wide-md'
+                  mod = 'btn--wide-md js-popup-open',
+                  attributes = i.btn.attributes
                 ) }}
               </div>
             </div>

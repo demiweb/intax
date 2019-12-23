@@ -3,14 +3,13 @@
   <div class="swiper-container js-slider" data-slider="sponsors">
     <div class="swiper-wrapper slider">
       {% for i in range(0, 6) %}
-      <div class="swiper-slide slide sponsor js-popup-info-card">
+      <div class="swiper-slide slide sponsor">
         <div class="sponsor__top">
           <div class="sponsor__logo">
             <img
-              class="js-lazy js-popup-info-img"
+              class="js-lazy"
               alt=""
               src=""
-              data-popup-info="./img/76.jpg"
               data-src="./img/76.jpg"/>
           </div>
 
@@ -22,13 +21,11 @@
         <div class="sponsor__content">
           <div class="sponsor__title">
             <h3
-              class="title title--h3 js-popup-info-title"
-              data-popup-info="content">«Eurofast»</h3>
+              class="title title--h3">«Eurofast»</h3>
           </div>
 
           <div
-            class="sponsor__text text-overflow js-popup-info-text"
-            data-popup-info="content"
+            class="sponsor__text text-overflow"
           >
             <p>«Eurofast» — региональная бизнес-консультационная организация в Юго-Восточной Европе и на Ближнем Востоке, имеет 22 филиала. Компания позиционирует себя как единый магазин для инвесторов и компаний... которые ищут профессио-нальные услуги в Регионе.</p>
             <a href="#">www.eurofast.eu</a>
@@ -37,6 +34,7 @@
           <button
             class="sponsor__link link link--arrow js-popup-open"
             data-popup-target="info"
+            data-popup-url="./partials/popup-sponsor-1.html"
           >Читать о компании</button>
         </div>
       </div>

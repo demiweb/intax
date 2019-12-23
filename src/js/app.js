@@ -6,6 +6,7 @@ import 'core-js/features/object/values'
 import 'intersection-observer'
 import './lib/polyfill'
 import smoothscroll from 'smoothscroll-polyfill'
+import 'whatwg-fetch'
 
 import sayHello from './lib/sayHello'
 import setHTMLClassNames from './components/setHTMLClassNames'
@@ -14,6 +15,7 @@ import toggleHeader from './components/Header/Header'
 import scrollTo from './components/scrollTo'
 import setTextareaHeight from './components/Textarea/Textarea'
 import setSelects from './components/Select/Select'
+import addPersonRegistration from './components/addPersonRegistration'
 
 import classNames from './classNames'
 
@@ -73,13 +75,16 @@ class App {
   }
 
   initMethods() {
-    this.methods.sayHello = sayHello
-    this.methods.setHTMLClassNames = setHTMLClassNames
-    this.methods.setLazy = setLazy
-    this.methods.toggleHeader = toggleHeader
-    this.methods.scrollTo = scrollTo
-    this.methods.setTextareaHeight = setTextareaHeight
-    this.methods.setSelects = setSelects
+    this.methods = {
+      sayHello,
+      setHTMLClassNames,
+      setLazy,
+      toggleHeader,
+      scrollTo,
+      setTextareaHeight,
+      setSelects,
+      addPersonRegistration,
+    }
 
     Object.values(this.methods).forEach(fn => fn(this))
   }

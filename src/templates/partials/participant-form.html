@@ -1,0 +1,71 @@
+{% import "mixins/_all.html" as mixins %}
+
+{%set
+blocks = [
+  {
+    title: 'Участник №1',
+    fields: [
+      {
+        name: 'input',
+        type: 'text',
+        placeholder: 'Имя, фамилия ',
+        fieldClass: '',
+        fieldAttributes: {},
+        options: [],
+        label: { last: '' }
+      },
+      {
+        name: 'input',
+        type: 'text',
+        placeholder: 'должность ',
+        fieldClass: '',
+        fieldAttributes: {},
+        options: [],
+        label: { last: '' }
+      },
+      {
+        name: 'input',
+        type: 'tel',
+        placeholder: 'Tелефон ',
+        fieldClass: '',
+        fieldAttributes: {},
+        options: [],
+        label: { last: '' }
+      },
+      {
+        name: 'input',
+        type: 'email',
+        placeholder: 'Электронный адрес ',
+        fieldClass: '',
+        fieldAttributes: {},
+        options: [],
+        label: { last: '' }
+      }
+    ]
+  }
+]
+%}
+
+<div class="form__block">
+  {% for i in blocks %} 
+  
+    <div class="form__block-title">
+      <h3 class="title title--h3">{{ i.title | safe }}</h3>
+    </div>
+    {% for j in i.fields %}
+      <div class="form__field{% if j.wrapMod %} {{ j.wrapMod}}{% endif %}">
+        {{ mixins.input(
+          name = j.name,
+          mod = '',
+          type = j.type,
+          placeholder = j.placeholder,
+          options = j.options,
+          value = '',
+          fieldClass = j.fieldClass,
+          fieldAttributes = j.fieldAttributes,
+          label = j.label
+        ) }}
+      </div>
+    {% endfor %}
+  {% endfor %}
+</div>

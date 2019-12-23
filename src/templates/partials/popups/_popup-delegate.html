@@ -58,19 +58,20 @@ form = {
           name: 'select',
           type: '',
           placeholder: '',
-          fieldClass: 'js-select',
+          fieldClass: 'js-select js-participants-number',
           fieldAttributes: {},
           options: [
             { value: 'placeholder', option: 'Количество участников' },
-            { value: '1', option: 'Количество участников1' },
-            { value: '2', option: 'Количество участников2' },
-            { value: '3', option: 'Количество участников3' }
+            { value: '1', option: '1' },
+            { value: '2', option: '2' },
+            { value: '3', option: '3' }
           ],
           label: { last: '' }
         }
       ]
     },
     {
+      dynamicBlocks: true,
       title: 'Участник №1',
       fields: [
         {
@@ -110,7 +111,7 @@ form = {
           label: { last: '' }
         }
       ]
-    },
+    },    
     {
       title: '',
       fields: [
@@ -164,3 +165,4 @@ form = {
   </div>
 </div>
 <!-- end popup -->
+

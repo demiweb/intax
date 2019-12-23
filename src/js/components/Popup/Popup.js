@@ -8,6 +8,10 @@ export default class Popup extends PopupPlugin {
     return this.btn.closest(`.${classNames.info.card}`)
   }
 
+  get btnData() {
+    return this.btn.dataset
+  }
+
   get infoCardEls() {
     return {
       title: this.infoCard.querySelector(`.${classNames.info.title}`),
@@ -24,56 +28,23 @@ export default class Popup extends PopupPlugin {
     }
   }
 
+  get infoPopupContentWrap() {
+    return this.popup.querySelector(`.${classNames.info.content}`)
+  }
+
   addContent() {
-    const content = {}
+    this.url = this.btn.dataset.popupUrl
+    if (!this.url) return
 
-    const cardEls = this.infoCardEls
-    const popupEls = this.infoPopupEls
-
-    // eslint-disable-next-line
-    for (const key in cardEls) {
-      const el = cardEls[key]
-
-      const data = el.dataset.popupInfo
-      let info
-      if (!data) return
-
-      if (data !== 'content') {
-        info = data
-      } else {
-        info = el.innerHTML
-      }
-
-      content[key] = info
-    }
-
-    // eslint-disable-next-line
-    for (const key in popupEls) {
-      const el = popupEls[key]
-      const info = content[key]
-      if (!el || !info) return
-
-      if (key !== 'img') {
-        el.innerHTML = info
-      } else {
-        el.src = info
-      }
-    }
+    this.xhr = fetch(this.url)
+      .then(responce => responce.text())
+      .then(text => {
+        if (this.infoPopupContentWrap) this.infoPopupContentWrap.innerHTML = text
+      })
   }
 
   removeContent() {
-    const popupEls = this.infoPopupEls
-
-    // eslint-disable-next-line
-    for (const key in popupEls) {
-      const el = popupEls[key]
-      if (!el) return
-      if (key !== 'img') {
-        el.innerHTML = ''
-      } else {
-        el.src = ''
-      }
-    }
+    if (this.infoPopupContentWrap) this.infoPopupContentWrap.innerHTML = ''
   }
 
   handleVideoClose() {

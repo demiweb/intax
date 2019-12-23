@@ -35,12 +35,17 @@ export default {
   },
   popup: {
     info: {
-      card: 'js-popup-info-card',
-      title: 'js-popup-info-title',
-      text: 'js-popup-info-text',
-      img: 'js-popup-info-img',
+      content: 'js-popup-info-content',
+      // card: 'js-popup-info-card',
+      // title: 'js-popup-info-title',
+      // text: 'js-popup-info-text',
+      // img: 'js-popup-info-img',
     },
   },
   textarea: 'js-textarea',
   select: 'js-select',
+  participants: {
+    forms: 'js-participants-forms',
+    select: 'js-participants-number',
+  },
 }

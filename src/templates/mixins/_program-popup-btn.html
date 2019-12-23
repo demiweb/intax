@@ -1,0 +1,11 @@
+{% macro programPopupBtn(title, btn) %}
+<span
+  class="scedule-item__sign"
+><strong>{{ title | safe }}</strong>&nbsp;
+  <button
+    class="js-popup-open"
+    data-popup-url="{{ btn.url }}"
+    data-popup-target="info"
+  >{{ btn.title | safe }}</button>
+</span>
+{% endmacro %}
