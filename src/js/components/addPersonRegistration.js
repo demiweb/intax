@@ -16,16 +16,24 @@ export default () => {
     if (!participantsWrap || !blocksLength) return
     const [block] = participantsWrap.children
 
-    participantsWrap.innerHTML = ''
-    BEMblock(block, 'form__block').removeMod(IS_HIDDEN)
-    for (let i = 0; i < blocksLength; i++) {
-      const blockClone = block.cloneNode(true)
-      const title = blockClone.querySelector('.title')
-      const titleText = `${title.dataset.title}${i + 1}`
+    const blockHMTL = block.outerHTML
+    let content = ''
 
-      title.innerHTML = titleText
-      participantsWrap.appendChild(blockClone)
+    participantsWrap.innerHTML = ''
+
+    for (let i = 0; i < blocksLength; i++) {
+      content = content.concat(blockHMTL)
+
+      participantsWrap.innerHTML = content
     }
+
+    const nodes = [...participantsWrap.children]
+    nodes.forEach((node, i) => {
+      BEMblock(node, 'form__block').removeMod(IS_HIDDEN)
+      const title = node.querySelector('.title')
+      if (!title) return
+      title.innerHTML = `${title.dataset.title}${i + 1}`
+    })
   }
 
   selects.forEach(select => {
