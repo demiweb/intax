@@ -16,6 +16,7 @@ import scrollTo from './components/scrollTo'
 import setTextareaHeight from './components/Textarea/Textarea'
 import setSelects from './components/Select/Select'
 import addPersonRegistration from './components/addPersonRegistration'
+import setGallery from './components/Gallery/Gallery'
 
 import classNames from './classNames'
 
@@ -84,6 +85,7 @@ class App {
       setTextareaHeight,
       setSelects,
       addPersonRegistration,
+      setGallery,
     }
 
     Object.values(this.methods).forEach(fn => fn(this))

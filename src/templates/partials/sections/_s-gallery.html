@@ -6,11 +6,12 @@
     <!-- begin slider -->
     <div class="slider__wrap slider--gallery__wrap">
       <div class="swiper-container js-slider" data-slider="gallery">
-        <div class="swiper-wrapper slider">
+        <div class="swiper-wrapper slider js-lightgallery">
           {% for i in range(0, 6) %}
-          <div
+          <a
+            href="./img/528.jpg"
             class="swiper-slide slide js-lazy"
-            data-background-image="./img/528.jpg"></div>
+            data-background-image="./img/528.jpg"></a>
           {% endfor %}
         </div>
       </div>

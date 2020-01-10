@@ -54,7 +54,7 @@ export default class Slider {
         navigation,
         centeredSlides: true,
         slidesPerView: 3,
-        loop: true,
+        // loop: true,
         grabCursor: true,
         on: {
           init: onInit,

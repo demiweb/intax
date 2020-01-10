@@ -48,4 +48,5 @@ export default {
     forms: 'js-participants-forms',
     select: 'js-participants-number',
   },
+  gallery: 'js-lightgallery',
 }
