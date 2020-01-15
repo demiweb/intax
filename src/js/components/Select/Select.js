@@ -1,6 +1,7 @@
 // import MySelect from './MySelect'
 import CustomSelect from 'select-custom'
 import classNames from '../../classNames'
+import filterSearch from './filterSearch'
 
 export default () => {
   const selects = [...document.querySelectorAll(`.${classNames.select}`)]
@@ -8,6 +9,12 @@ export default () => {
 
   const options = {
     default: {},
+    with_search: {
+      panelItem: {
+        position: 'top',
+        item: '<input type="text" class="js-search" placeholder="" />',
+      },
+    },
   }
 
   selects.forEach(select => {
@@ -21,6 +28,12 @@ export default () => {
     const name = select.dataset.type
     const mySelect = new CustomSelect(select, options[name])
     mySelect.init()
+
+    const wrap = select.parentNode
+    const search = wrap.querySelector('.js-search')
+    const customOptions = [...wrap.querySelectorAll('.custom-select__option')]
+
+    filterSearch(search, customOptions)
 
     select.parentNode.setAttribute('tabindex', '0')
   })
