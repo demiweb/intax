@@ -108,12 +108,17 @@
     max-height: 250px
     overflow: auto
   &__panel-item
-    // padding-left: 10px
-    // padding-right: 10px
+    position: relative
+    .icon
+      position: absolute
+      z-index: 1
+      right: 10px
+      top: 50%
+      transform: translate(0, -50%)
+    #{$text-inputs}
+      padding-right: 30px
 
   &--open
     z-index: 2
     #{$this}__panel
       +visible
-
-
