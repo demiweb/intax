@@ -1,0 +1,150 @@
+{%set
+blocks = [
+  {
+    topLine: 'Another event with the focus on PRIVATE CLIENTS',
+    title: 'INTAX PRIVATE CAPITAL FORUM Kyiv',
+    date: '10-11 novwember 2020',
+    address: 'Intercontinental Hotel, Kyiv, Ukraine',
+    bg: '1'
+  },
+  {
+    topLine: 'Another event with the focus on PRIVATE CLIENTS',
+    title: 'INTAX FORUM',
+    date: '19-20 May 2020',
+    address: 'Intercontinental Hotel, Kyiv, Ukraine',
+    bg: '2'
+  },
+  {
+    title: 'INTAX EXPO ',
+    date: '21-22 September 2020',
+    address: 'Lotte Hotel, Moscow, Russia',
+    bg: '4'
+  }
+]
+%}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Index</title>
+</head>
+
+<body bgcolor="#ffffff" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" style="-webkit-font-smoothing: antialiased;width:100% !important;overflow-x:hidden !important;background:#ffffff;-webkit-text-size-adjust:none; font-family: Helvetica, Arial, sans-serif; font-size: 15px; color: #3b3b3b;">
+  <table width="600" cellpadding="0" cellspacing="0" border="0" align="center" style="padding: 0; width: 100%; max-width: 600px;">
+    <tr>
+      <td>
+        <center style="max-width: 600px; width: 100%;">
+          <table width="100%" bgcolor="#ffffff" cellpadding="0" cellspacing="0" border="0" align="center" style="padding: 0;">
+            <tr bgcolor="#332c2a" style="color: white;background-image: url('./img/letters/bg-header.jpg');background-size: cover;background-repeat: no-repeat;background-position: 50% 0%">
+              <td height="75" width="50%" bgcolor="" valign="center" style="padding-left: 40px">
+                <img src="./img/letters/logo.png" width="180" height="42" alt="">
+              </td>
+              <td height="75" width="50%" bgcolor="" valign="center" style="padding-left: 10px;padding-right: 40px">
+                <span style="display: inline-block;vertical-align: middle;margin-right: 10px;">Follow us:</span>
+                <a href="#" style="display: inline-block;vertical-align: middle;margin-right: 7px;"><img src="./img/letters/instagram.png" alt=""></a>
+                <a href="#" style="display: inline-block;vertical-align: middle;margin-right: 7px;"><img src="./img/letters/facebook-logo.png" alt=""></a>
+                <a href="#" style="display: inline-block;vertical-align: middle;margin-right: 7px;"><img src="./img/letters/linked-in-logo-of-two-letters.png" alt=""></a>
+                <a href="#" style="display: inline-block;vertical-align: middle;"><img src="./img/letters/youtube-logotype.png" alt=""></a>
+              </td>
+            </tr>
+          </table>
+        </center>
+      </td>
+    </tr>
+  </table>
+
+  <table width="600" cellpadding="0" cellspacing="0" border="0" align="center" style="padding: 0; width: 100%; max-width: 600px;">
+    <tr>
+      <td>
+        <center style="max-width: 600px; width: 100%;">
+          <table width="100%" bgcolor="#ffffff" cellpadding="0" cellspacing="0" border="0" align="center" style="padding: 0;">
+            <tr bgcolor="#fff" style="background-image: url('./img/letters/bg-section.jpg');background-size: cover;background-repeat: no-repeat;background-position: 50% 0%">
+              <td height="75" width="50%" bgcolor="" valign="center" align="center" style="font-size: 21px;padding-top: 45px;padding-left: 40px;padding-right: 40px;padding-bottom: 45px;">
+                <h1 style="text-transform: uppercase;color: #644335;font-size: 30px;margin-bottom: 15px;margin-top: 0;"> We thank you for your interest <br> in our events</h1>
+
+                <div style="margin-bottom: 5px;">Your request was successfully submitted.</div>
+                <img src="./img/letters/rect.png" alt="" width="100%" style="margin-bottom: 15px;max-width: 430px;">
+                <div>We will contact you shortly.</div>                
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img src="./img/letters/3.jpg" alt="" width="100%" style="max-width: 100%;">
+              </td>
+            </tr>
+          </table>
+        </center>
+      </td>
+    </tr>
+  </table>
+
+  <table width="600" cellpadding="0" cellspacing="0" border="0" align="center" style="padding: 0; width: 100%; max-width: 600px;">
+    <tr>
+      <td>
+        <center style="max-width: 600px; width: 100%;">
+          <table width="100%" bgcolor="#ffffff" cellpadding="0" cellspacing="0" border="0" align="center" style="padding: 0;">
+            <tr style="font-size: 18px;">
+              <td style="padding-left: 55px;padding-top: 40px;padding-bottom: 40px;border-bottom: 1px solid #e6e6e6;" width="68%" valign="center">
+
+                <p style="color: #151515;margin: 0;">Reach more clients on your target markets, visiting our dedicated events in Russia and Ukraine with a focus on corporate and individual clients.</p>
+              </td>
+              <td width="32%" align="right" valign="center" style="padding-right: 40px;border-bottom: 1px solid #e6e6e6;padding-top: 15px;padding-bottom: 15px;">
+                <img src="./img/letters/logo-vert.png" alt="" width="30">
+              </td>
+            </tr>           
+          </table>
+        </center>
+      </td>
+    </tr>
+  </table>
+
+  {% for i in blocks %}
+  <table width="600" cellpadding="0" cellspacing="0" border="0" align="center" style="padding: 0; width: 100%; max-width: 600px;">
+    <tr>
+      <td>
+        <center style="max-width: 600px; width: 100%;">
+          <table width="100%" bgcolor="#ffffff" cellpadding="0" cellspacing="0" border="0" align="center" style="padding: 0;">
+            {% if i.topLine %}
+            <tr>
+              <td height="60" valign="center" bgcolor="#322c2b" style="padding-left: 40px;padding-right: 40px;font-size: 18px;color: #fff;background-image: url('./img/letters/bg-block.png');background-repeat: no-repeat;background-size: cover;background-position: 0% 50%;">
+                {{ i.topLine }}
+              </td>
+            </tr>
+            {% endif %}
+            <tr>
+              <td style="padding: 40px;background-color: #f4f4f4;font-size: 17px;color: #151515;background-image: url('./img/letters/{{ i.bg }}.jpg');background-repeat: no-repeat;background-position: 100% 100%;background-size: cover;">
+                <h2 style="margin: 0;font-size: 30px;text-transform: uppercase;margin-bottom: 12px;">{{ i.title }}</h2>
+
+                <div style="display: inline-block;text-transform: uppercase;padding: 8px;position: relative;margin-bottom: 12px;">
+                  <img src="./img/letters/border.png" alt="" width="100%" height="100%" style="position: absolute;z-index: 0;top: 0;left: 0;">
+                  <span style="position: relative;z-index: 1;">{{ i.date }}</span>
+                </div>
+
+                <div style="text-transform: uppercase;margin-right: 20px;">{{ i.address }}</div>
+                <a href="#" style="color: #c08b61;text-transform: uppercase;text-decoration: underline;">details <img src="./img/letters/right-arrow.png" alt="" width="30" height="16" style="display: inline-block;margin-left: 8px;vertical-align: middle;"></a>
+              </td>
+            </tr>
+          </table>
+        </center>
+      </td>
+    </tr>
+  </table>
+  {% endfor %}
+
+  <table width="600" cellpadding="0" cellspacing="0" border="0" align="center" style="padding: 0; width: 100%; max-width: 600px;">
+    <tr>
+      <td height="120" align="center" valign="center" style="border-top: 1px solid  #e6e6e6;">
+        <center style="max-width: 600px; width: 100%;">
+          <table width="100%" bgcolor="#ffffff" cellpadding="0" cellspacing="0" border="0" align="center" style="padding: 0;">
+            <div style="margin-bottom: 5px;">Kind regards,</div>       
+            <div style="font-weight: 700;text-transform: uppercase;">INTAX GROUP</div>
+          </table>
+        </center>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
+
