@@ -4,3 +4,4 @@ PageList:
 - file: page.html
 - file: email.html
 - file: email-english.html
+- file: email-invite.html
