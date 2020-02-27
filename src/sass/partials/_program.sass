@@ -87,13 +87,6 @@
     font-weight: 700
     margin-bottom: .2em
   &__text
-    // em
-    //   color: $gray-light
-    p, blockquote
-      // +notlast
-      //   margin-bottom: 35px
-      //   +md
-      //     margin-bottom: 20px
     blockquote
       font-style: italic
       background-color: $white
@@ -103,11 +96,21 @@
       margin-top: 35px
       +md
         margin-top: 20px
-    a, button
+    button, a:not(.scedule-item__sign-link)
       color: $blue
       text-decoration: underline
   &__sign
     strong
       font-size: $fz-sm
       font-style: italic
+  &__sign-link
+    display: inline-flex
+    align-items: center
+    color: $blue
+    .icon
+      fill: #e2574c
+      margin-left: .2em
+    span
+      text-decoration: underline
+
 

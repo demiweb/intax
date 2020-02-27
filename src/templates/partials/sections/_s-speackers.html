@@ -108,7 +108,8 @@ slider = [
       </div>
     </div>
     <!-- end slider -->
-
+    
+    {% if page !== 'page-after' %}
     <div class="section__btn text-center">
       {{ mixins.btn(
         title = 'стать спикером',
@@ -117,6 +118,7 @@ slider = [
         attributes = { 'data-popup-target': 'speaker-reg' }
       ) }}
     </div>
+    {% endif %}
   </div>
 </section>
 <!-- end section -->

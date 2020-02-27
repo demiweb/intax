@@ -30,8 +30,10 @@
       </button>
     </div>
     <!-- END content -->
-
-    {% include "partials/popups/_popups.html" %}
+    
+    {% if not noPopups %}
+      {% include "partials/popups/_popups.html" %}
+    {% endif %}
 
     <!-- BEGIN scripts -->
     <script type="text/javascript" src="js/app.js"></script>

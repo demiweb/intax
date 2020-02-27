@@ -1,0 +1,22 @@
+---
+title: Index page
+page: page-after
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+  {% include "partials/_hero.html" %}
+  {% include "partials/sections/_s-info.html" %}
+  {% include "partials/sections/_s-closest-event.html" %}
+  {% include "partials/sections/_s-program.html" %}
+  {% include "partials/sections/_s-gallery.html" %}
+  {% include "partials/sections/_s-subscribe.html" %}
+
+  {% include "partials/sections/_s-speackers.html" %}
+  {% include "partials/sections/_s-sponsors.html" %}
+
+  {% include "partials/sections/_s-org.html" %}
+  {% include "partials/sections/_s-contacts.html" %}
+  
+ 
+{% endblock %}

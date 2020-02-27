@@ -35,7 +35,9 @@ tabs = [
       </div>
     </div>
     <!-- end program -->
+    
 
+    {% if page !== 'page-after' %}
     <div class="section__btn">
       {{ mixins.btn(
         title = 'Зарегистрироваться',
@@ -44,6 +46,7 @@ tabs = [
         attributes = { 'data-popup-target': 'registration' }
       ) }}
     </div>
+    {% endif %}
   </div>
 </section>
 <!-- end section -->

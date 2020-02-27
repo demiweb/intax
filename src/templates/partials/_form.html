@@ -1,5 +1,5 @@
 <!-- begin form -->
-<div class="form">
+<div class="form{% if form.mod %} {{ form.mod }}{% endif %}">
   <form> 
     {% if form.title %}
       <div class="form__title">
@@ -8,6 +8,15 @@
     {% endif %}
     {% if form.subttl %}
       <div class="form__subttl">{{ form.subttl | safe }}</div>
+    {% endif %}
+
+    {% if form.titleSm %}
+      <div class="form__title-sm">
+        {{ form.titleSm | safe }}
+      </div>
+    {% endif %}
+    {% if form.subttlSm %}
+      <div class="form__subttl-sm">{{ form.subttlSm | safe }}</div>
     {% endif %}
 
     {% if form.fields %}

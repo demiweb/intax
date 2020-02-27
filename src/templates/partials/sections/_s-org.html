@@ -21,6 +21,7 @@
       </div>
     </div>
 
+    {% if page !== 'page-after' %}
     <div class="section-btns">
       <div class="section-btns__btn">
         {{ mixins.btn(
@@ -40,6 +41,7 @@
         ) }}
       </div>
     </div>
+    {% endif %}
   </div>
 </section>
 <!-- end section -->

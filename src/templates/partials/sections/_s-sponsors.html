@@ -22,7 +22,7 @@ blocks = [
 %}
 
 <!-- begin section -->
-<section class="section">
+<section class="section{% if page === 'page-after' %} pb-0{% endif %}">
   <div class="container">
     {% for i in blocks %}
     <div id="{{ i.id }}" class="section__block js-scroll-to-section">
@@ -30,6 +30,7 @@ blocks = [
 
       {% include "partials/_sponsors-slider.html" %}
 
+      {% if page !== 'page-after' %}
       <div class="section__btn">
         {{ mixins.btn(
           title = i.btn.title,
@@ -38,6 +39,7 @@ blocks = [
           attributes = i.btn.attributes
         ) }}
       </div>
+      {% endif %}
     </div>
     {% endfor %}
   </div>

@@ -1,11 +1,19 @@
-{% macro programPopupBtn(title, btn) %}
+{% macro programPopupBtn(title, btn, href) %}
 <span
   class="scedule-item__sign"
 ><strong>{{ title | safe }}</strong>&nbsp;
+  {% if href %}
+    <a
+      href="{{ href }}"
+      class="{% if btn.class %}{{ btn.class }}{% endif %}"
+      {% for attr, attrValue in btn.attributes %} {{ attr }}="{{ attrValue }}" {% endfor %}
+    >{{ btn.title | safe }}</a>
+  {% else %}
   <button
     class="js-popup-open"
     data-popup-url="{{ btn.url }}"
     data-popup-target="info"
   >{{ btn.title | safe }}</button>
+  {% endif %}
 </span>
 {% endmacro %}

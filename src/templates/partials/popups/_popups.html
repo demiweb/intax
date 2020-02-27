@@ -1,7 +1,12 @@
 {% include "partials/popups/_popup-speaker.html" %}
-{% include "partials/popups/_popup-video.html" %}
-{% include "partials/popups/_popup-delegate.html" %}
-{% include "partials/popups/_popup-speaker-reg.html" %}
-{% include "partials/popups/_popup-sponsor-reg.html" %}
-{% include "partials/popups/_popup-stand.html" %}
-{% include "partials/popups/_popup-terms.html" %}
+
+{% if page !== 'page-after' %}
+  {% include "partials/popups/_popup-video.html" %}
+
+
+  {% include "partials/popups/_popup-delegate.html" %}
+  {% include "partials/popups/_popup-speaker-reg.html" %}
+  {% include "partials/popups/_popup-sponsor-reg.html" %}
+  {% include "partials/popups/_popup-stand.html" %}
+  {% include "partials/popups/_popup-terms.html" %}
+{% endif %}

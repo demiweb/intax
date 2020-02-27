@@ -2,6 +2,7 @@ ProjectTitle: intax
 
 PageList:
 - file: page.html
+- file: page-2.html
 - file: email.html
 - file: email-english.html
 - file: email-invite.html

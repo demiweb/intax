@@ -1,0 +1,39 @@
+.block
+  box-shadow: 0px 0px 38px 0px rgba(0, 0, 0, 0.09)
+  background-color: $white
+  padding: 40px
+  +xl
+    padding: 30px
+  +lg
+    padding: 20px
+  +md
+    padding: 15px
+  &__el
+    +notlast
+      margin-bottom: 15px
+  &__text
+    max-width: 550px
+    p
+      +notlast
+        margin-bottom: 15px
+  &__btn
+    text-align: center
+    position: relative
+    z-index: 1
+  &__top
+    display: flex
+    align-items: center
+    justify-content: space-between
+    +xl
+      display: block
+      img
+        display: block
+        margin-bottom: 10px
+  &--gray
+    background-color: $gray-lightest
+
+  &--equal
+    height: 100%
+    display: flex
+    justify-content: center
+    flex-direction: column

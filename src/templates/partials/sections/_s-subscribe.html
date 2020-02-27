@@ -1,0 +1,98 @@
+{%set
+form = {
+  mod: 's-subscribe__form',
+  titleSm: 'Подписывайтесь на рассылку новостей - будьте в курсе 
+    о предстоящих мероприятиях и экономьте на раннем бронировании. ',
+  subttlSm: 'Подписывайтесь на рассылку новостей - будьте в курсе 
+    о предстоящих мероприятиях и экономьте на раннем бронировании. ',
+  btn: {
+    title: 'подписаться на рассылку'
+  },
+  fields: [
+    {
+      name: 'input',
+      type: 'text',
+      placeholder: 'Имя',
+      fieldClass: '',
+      fieldAttributes: {},
+      options: [],
+      label: { last: '' }
+    },
+    {
+      name: 'input',
+      type: 'text',
+      placeholder: 'название компании',
+      fieldClass: '',
+      fieldAttributes: {},
+      options: [],
+      label: { last: '' }
+    },
+    {
+      name: 'input',
+      type: 'tel',
+      placeholder: 'Tелефон',
+      fieldClass: '',
+      fieldAttributes: {},
+      options: [],
+      label: { last: '' }
+    },
+    {
+      name: 'input',
+      type: 'email',
+      placeholder: 'Электронный адрес',
+      fieldClass: '',
+      fieldAttributes: {},
+      options: [],
+      label: { last: '' }
+    },
+    {
+      wrapMod: 'form__field--checkbox',
+      name: 'checkbox',
+      type: 'checkbox',
+      placeholder: '',
+      fieldClass: '',
+      fieldAttributes: { checked: '' },
+      options: [],
+      label: { last: '<span>Даю согласие на обработку и хранение моих данных согласно 
+действующего законодательства</span>' }
+    }
+  ]
+}
+%}
+
+<!-- begin section -->
+<section id="subscribe" class="section section--gray section--border-bottom s-subscribe">
+  <div class="container">
+    <div class="section__title text-center">
+      <h2 class="title title--h2">подписка</h2>
+    </div>
+
+    <div class="grid">
+      <div class="_col-md-6">
+        {% include "partials/_form.html" %}
+      </div>
+
+      <div class="_col-md-6">
+        <!-- begin block -->
+        <div class="block">
+          <div class="block__top block__el">
+            <img class="js-lazy" alt="" src="" data-src="./img/logo-ins.png"/>
+
+            <div class="link-bold">
+              {{ mixins.icon('left-arrow') }}
+              <strong>Подписывайтесь прямо сейчас</strong>
+            </div>
+          </div>
+
+          <div class="block__text">
+            <p>Новости со всего мира об управлении, налогообложении и <br> защите больших денег. <br>
+            А также – о богатстве и о богатых людях: личные финансы, инвестиции, Life style миллионеров.</p>
+            <p>Канал создан командой Intax Group – аналитики одного из <br> лучших мировых организаторов конференций ежедневно <br> мониторят сотни источников информации для вас и <br> отбирают самое интересное.</p>
+          </div>
+        </div>
+        <!-- end block -->
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end section -->
